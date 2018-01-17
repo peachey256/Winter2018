@@ -6,6 +6,12 @@
 \usepackage{graphicx}
 \usepackage{color}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{algorithm2e}
+\usepackage{float}
+
 \sloppy
 \definecolor{lightgray}{gray}{0.5}
 \setlength{\parindent}{0pt}
@@ -13,6 +19,9 @@
 \graphicspath{ {Assignment_1_files/} }
 \begin{document}
 
+\title{Lab 1: Basics of Image Processing}
+\author{Brian Hosler \& Sarah Peachey }
+\maketitle 
     
     
 \subsection*{Contents}
@@ -23,6 +32,10 @@
    \item Part 2
    \item Part 3
 \end{itemize}
+
+\newpage 
+
+
 \begin{verbatim}
 %Assignemnt 1
 %Brian Hosler and Sarah Peachey
@@ -89,13 +102,43 @@ function [ img_out ] = Gcorrection(img_in, gama)
 end
 
 \end{verbatim} \color{black}
-    
+
+The Gcorrection function is given an input $\gamma$ less than 1,
+greater than 1 and equal to one. As seen in Figure \ref{pout}, when the
+$\gamma=0.4 < 1$ the picture becomes much lighter. Also, the image
+histogram is shifted to higher values and it shrank in width. Meaning that
+the picture has higher grey values over a smaller range. When $\gamma=1$ the
+original image is shown, therefore the image histogram can be used for
+reference. When $\gamma=2.1 < 1$ the image pixel values are lower but
+occupy a larger range than the original image. 
+
+\begin{figure} [H]
 \includegraphics [width=4in]{lab1_01.eps}
+\caption{Varying gamma in Gcorrection function}
+\label{pout}
+\end{figure}
 
+The Gcorrection function was used to edit moonPhobos.tiff and the best
+percieved version of the picture was at $\gamma=0.3$. For comparison the
+MATLAB built in the function histeq was also used the results of both can be
+see in \ref{MoonHobos}. As seen in \ref{moonHoboHist}, the Gcorrection
+actually seemed ot spread out the values of historgram better, but by making
+the pixel values lower, the image became much more dark, so some of the details
+are lost. Whereas histeq does a better job of making sure the darker details
+and lighter details are maintained. 
+
+
+\begin{figure} [H]
 \includegraphics [width=4in]{lab1_02.eps}
+\caption{Gcorrection vs Histeq}
+\label{MoonHobos}
+\end{figure}
 
+\begin{figure} [H]
 \includegraphics [width=4in]{lab1_03.eps}
-
+\caption{Histograms of Gcorrection vs Histeq}
+\label{moonHoboHist}
+\end{figure}
 
 \subsection*{Part 2}
 
