@@ -37,8 +37,8 @@
 \maketitle 
 
 \abstract{Stuff about images and processing them}
-\newpage
 \tableofcontents
+\newpage
 
 
 \section{Contrast Enhancement}
@@ -95,6 +95,7 @@ imhist(Gcorrection(pout,2.1))
 \end{lstlisting}
 
 
+\newpage
 \subsection{Histogram Equalization}
 Finally, Gamma correction was compared to histogram equalization
 using the photo MoonPhobos.tif. This photo has a bimodal
@@ -125,11 +126,17 @@ title('HistEQ')
 The Gcorrection function is given an input $\gamma$ less than 1,
 greater than 1 and equal to one. As seen in Figure \ref{pout}, when the
 $\gamma=0.4 < 1$ the picture becomes much lighter. Also, the image
-histogram is shifted to higher values and it shrank in width. Meaning that
-the picture has higher grey values over a smaller range. When $\gamma=1$ the
+histogram is shifted to higher values and it's middle and high values are
+compressed. This results in
+the picture having higher grey values over a smaller range. When $\gamma=1$ the
 original image is shown, therefore the image histogram can be used for
-reference. When $\gamma=2.1 < 1$ the image pixel values are lower but
-occupy a larger range than the original image. 
+reference. This is because any value raised to the first power is itself.
+When $\gamma=2.1 < 1$ the image pixel values are lower but
+occupy a slightly larger range than the original image. The original image
+has most of it's pixel values concentraited in the center, around 127. Gamma
+correction does not take advantage of the full range of pixel values
+available in this instance, because it performs a unidirecitonal shift of
+the histogram, instead of spreading the concentration at the center.
 
 \begin{figure} [H]
 \centering
@@ -138,12 +145,13 @@ occupy a larger range than the original image.
 \label{pout}
 \end{figure}
 
+
 The Gcorrection function was used to edit moonPhobos.tiff and the best
 percieved version of the picture was at $\gamma=0.3$. For comparison the
-MATLAB built in the function histeq was also used the results of both can be
+MATLAB built in function histeq was also used. The results of both can be
 see in \ref{MoonHobos}. As seen in \ref{moonHoboHist}, the Gcorrection
-actually seemed ot spread out the values of historgram better, but by making
-the pixel values lower, the image became much more dark, so some of the details
+actually seemed to spread out the values of historgram better, but by making
+the pixel values lower, the image became much darker, so some of the details
 are lost. Whereas histeq does a better job of making sure the darker details
 and lighter details are maintained. 
 
@@ -162,38 +170,45 @@ and lighter details are maintained.
 \label{moonHoboHist}
 \end{figure}
 
-\section{Part 2}
 
-\begin{verbatim}
-%1
-%Our High-Boot filter function
-type('HBfilt.m')
 
-%2
+\newpage
+\section{High Frequency Content}
+This section investigates the effect that high-frequency content has
+on an image.
+
+
+\subsection{High Boot Filtering}
+High Boost filtering is a technique that increases high-frequencies.
+This is achieved by extracting the "sharpness" using a laplacian
+filter, and adding back to the original image a magnified version of
+that sharpness. The code to do so is shown below.
+\lstinputlisting[language=Matlab]{HBfilt.m}
+
+\subsection{Effect of High Boost Filtering}
+An image of the moon is filtered using the HBfilt function to better
+see the surface texture.
+\begin{lstlisting}[language=Matlab]
 %Read in and filter the moon image
 moon=imread('Assignment_1_Files/moon.tiff');
 figure
 imshow(HBfilt(moon,2.4))
 title('\alpha=2.4')
+\end{lstlisting}
 
-%3
+\subsection{High Boost Filtering to Sharpen an Image}
+Finally, an out-of-focus image is sharpened using High Boost filtering.
+Various alpha values were used to find the sharpest image.
+\begin{lstlisting}[language=Matlab]
 %Read in a blurry image and high-boost filter it
 oof=imread('Assignment_1_Files/outoffocus.tif');
 figure
 imshow(HBfilt(oof,4))
 title('\alpha=4')
 %High frequency noise added with increasing alpha(7)
-\end{verbatim}
+\end{lstlisting}
 
-        \color{lightgray} \begin{verbatim}
-function [ img_out ] = HBfilt(img_in, alph)
-%High boost filtering using a laplaccian filter
-    img_out=img_in+uint8(alph*conv2(double(img_in),[0 -.25 0; -.25 1 -.25; 0 -.25 0],'same'));
-end
-
-Warning: Image is too big to fit on screen; displaying at 67% 
-\end{verbatim} \color{black}
-    
+   
 \includegraphics [width=4in]{lab1_04.eps}
 
 \includegraphics [width=4in]{lab1_05.eps}

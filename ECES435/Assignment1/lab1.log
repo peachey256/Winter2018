@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 JAN 2018 10:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 JAN 2018 11:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -365,14 +365,14 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 37.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./lab1
-.toc)
+) (./lab1.toc)
 \tf@toc=\write3
 \openout3 = `lab1.toc'.
 
 
+[1
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -395,7 +395,7 @@ o.pdf>
 (epstopdf)                    size: 55199 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_01
 -eps-converted-to.pdf Assignment_1_files/lab1_01.eps>
-(epstopdf)             \includegraphics on input line 136.
+(epstopdf)             \includegraphics on input line 143.
 Package epstopdf Info: Output file is already uptodate.
 
 <Assignment_1_files/lab1_01-eps-converted-to.pdf, id=19, 463.7325pt x 387.4475p
@@ -403,7 +403,7 @@ t>
 File: Assignment_1_files/lab1_01-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_01-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_01-eps-converted-to.pdf used o
-n input line 136.
+n input line 143.
 (pdftex.def)             Requested size: 289.07999pt x 241.52742pt.
  [3 <./Assignment_1_files/lab1_01-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Assignment_1_files/lab1_02.eps>
@@ -415,7 +415,7 @@ o.pdf>
 (epstopdf)                    size: 240324 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_02
 -eps-converted-to.pdf Assignment_1_files/lab1_02.eps>
-(epstopdf)             \includegraphics on input line 153.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 
 <Assignment_1_files/lab1_02-eps-converted-to.pdf, id=43, 436.63126pt x 291.0875
@@ -423,7 +423,7 @@ pt>
 File: Assignment_1_files/lab1_02-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_02-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_02-eps-converted-to.pdf used o
-n input line 153.
+n input line 161.
 (pdftex.def)             Requested size: 289.07999pt x 192.71796pt.
 Package epstopdf Info: Source file: <Assignment_1_files/lab1_03.eps>
 (epstopdf)                    date: 2018-01-17 11:04:23
@@ -434,7 +434,7 @@ o.pdf>
 (epstopdf)                    size: 13629 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_03
 -eps-converted-to.pdf Assignment_1_files/lab1_03.eps>
-(epstopdf)             \includegraphics on input line 160.
+(epstopdf)             \includegraphics on input line 168.
 Package epstopdf Info: Output file is already uptodate.
 
 <Assignment_1_files/lab1_03-eps-converted-to.pdf, id=44, 450.68375pt x 373.395p
@@ -442,10 +442,10 @@ t>
 File: Assignment_1_files/lab1_03-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_03-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_03-eps-converted-to.pdf used o
-n input line 160.
+n input line 168.
 (pdftex.def)             Requested size: 289.07999pt x 239.51895pt.
  [4 <./Assignment_1_files/lab1_02-eps-converted-to.pdf> <./Assignment_1_files/l
-ab1_03-eps-converted-to.pdf>]
+ab1_03-eps-converted-to.pdf>] (./HBfilt.m)
 Package epstopdf Info: Source file: <Assignment_1_files/lab1_04.eps>
 (epstopdf)                    date: 2018-01-17 11:04:24
 (epstopdf)                    size: 341655 bytes
@@ -455,7 +455,7 @@ o.pdf>
 (epstopdf)                    size: 45638 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_04
 -eps-converted-to.pdf Assignment_1_files/lab1_04.eps>
-(epstopdf)             \includegraphics on input line 197.
+(epstopdf)             \includegraphics on input line 212.
 Package epstopdf Info: Output file is already uptodate.
 
 <Assignment_1_files/lab1_04-eps-converted-to.pdf, id=78, 469.755pt x 559.08875p
@@ -463,8 +463,9 @@ t>
 File: Assignment_1_files/lab1_04-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_04-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_04-eps-converted-to.pdf used o
-n input line 197.
+n input line 212.
 (pdftex.def)             Requested size: 289.07999pt x 344.05507pt.
+ [5]
 Package epstopdf Info: Source file: <Assignment_1_files/lab1_05.eps>
 (epstopdf)                    date: 2018-01-17 11:04:24
 (epstopdf)                    size: 1311693 bytes
@@ -474,18 +475,18 @@ o.pdf>
 (epstopdf)                    size: 105466 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_05
 -eps-converted-to.pdf Assignment_1_files/lab1_05.eps>
-(epstopdf)             \includegraphics on input line 199.
+(epstopdf)             \includegraphics on input line 214.
 Package epstopdf Info: Output file is already uptodate.
 
-<Assignment_1_files/lab1_05-eps-converted-to.pdf, id=79, 685.56125pt x 527.9725
+<Assignment_1_files/lab1_05-eps-converted-to.pdf, id=82, 685.56125pt x 527.9725
 pt>
 File: Assignment_1_files/lab1_05-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_05-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_05-eps-converted-to.pdf used o
-n input line 199.
+n input line 214.
 (pdftex.def)             Requested size: 289.07999pt x 222.63312pt.
- [5 <./Assignment_1_files/lab1_04-eps-converted-to.pdf>] [6 <./Assignment_1_fil
-es/lab1_05-eps-converted-to.pdf>]
+ [6 <./Assignment_1_files/lab1_04-eps-converted-to.pdf> <./Assignment_1_files/l
+ab1_05-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Assignment_1_files/lab1_06.eps>
 (epstopdf)                    date: 2018-01-17 11:04:26
 (epstopdf)                    size: 4188667 bytes
@@ -495,7 +496,7 @@ o.pdf>
 (epstopdf)                    size: 170432 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_06
 -eps-converted-to.pdf Assignment_1_files/lab1_06.eps>
-(epstopdf)             \includegraphics on input line 255.
+(epstopdf)             \includegraphics on input line 270.
 Package epstopdf Info: Output file is already uptodate.
 
 <Assignment_1_files/lab1_06-eps-converted-to.pdf, id=106, 326.21875pt x 363.357
@@ -503,8 +504,9 @@ Package epstopdf Info: Output file is already uptodate.
 File: Assignment_1_files/lab1_06-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_06-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_06-eps-converted-to.pdf used o
-n input line 255.
+n input line 270.
 (pdftex.def)             Requested size: 289.07999pt x 322.01768pt.
+ [7]
 Package epstopdf Info: Source file: <Assignment_1_files/lab1_07.eps>
 (epstopdf)                    date: 2018-01-17 11:04:26
 (epstopdf)                    size: 62319 bytes
@@ -514,27 +516,27 @@ o.pdf>
 (epstopdf)                    size: 20378 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_07
 -eps-converted-to.pdf Assignment_1_files/lab1_07.eps>
-(epstopdf)             \includegraphics on input line 257.
+(epstopdf)             \includegraphics on input line 272.
 Package epstopdf Info: Output file is already uptodate.
 
-<Assignment_1_files/lab1_07-eps-converted-to.pdf, id=107, 436.63126pt x 189.708
+<Assignment_1_files/lab1_07-eps-converted-to.pdf, id=111, 436.63126pt x 189.708
 76pt>
 File: Assignment_1_files/lab1_07-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_07-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_07-eps-converted-to.pdf used o
-n input line 257.
+n input line 272.
 (pdftex.def)             Requested size: 289.07999pt x 125.59894pt.
- [7 <./Assignment_1_files/lab1_06-eps-converted-to.pdf> <./Assignment_1_files/l
+ [8 <./Assignment_1_files/lab1_06-eps-converted-to.pdf> <./Assignment_1_files/l
 ab1_07-eps-converted-to.pdf>] (./lab1.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5808 strings out of 492995
- 82388 string characters out of 6132704
- 250650 words of memory out of 5000000
- 9264 multiletter control sequences out of 15000+600000
+ 5817 strings out of 492995
+ 82457 string characters out of 6132704
+ 248988 words of memory out of 5000000
+ 9269 multiletter control sequences out of 15000+600000
  12506 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,42p,298b,3921s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -549,10 +551,10 @@ b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on lab1.pdf (7 pages, 772024 bytes).
+Output written on lab1.pdf (8 pages, 777949 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 169 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
