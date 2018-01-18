@@ -12,6 +12,19 @@
 \usepackage{algorithm2e}
 \usepackage{float}
 
+\usepackage{listings}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+\lstset{numbers=right, 
+                numberstyle=\tiny, 
+                breaklines=true,
+                backgroundcolor=\color{light-gray},
+                numbersep=5pt,
+                xleftmargin=.5in,
+                xrightmargin=.5in} 
+
 \sloppy
 \definecolor{lightgray}{gray}{0.5}
 \setlength{\parindent}{0pt}
@@ -22,34 +35,40 @@
 \title{Lab 1: Basics of Image Processing}
 \author{Brian Hosler \& Sarah Peachey }
 \maketitle 
-    
-    
-\subsection*{Contents}
 
-\begin{itemize}
-\setlength{\itemsep}{-1ex}
-   \item Part 1
-   \item Part 2
-   \item Part 3
-\end{itemize}
-
-\newpage 
+\abstract{Stuff about images and processing them}
+\newpage
+\tableofcontents
 
 
-\begin{verbatim}
-%Assignemnt 1
-%Brian Hosler and Sarah Peachey
-\end{verbatim}
+\section{Contrast Enhancement}
+This section involved contrast enhancement, and a comparison
+of various different techniques.
+\subsection{Gamma Correction}
+First, a function, \verb|Gcorrection.m|, was made, to do contrast
+enhancement through gamma correction. Given a grayscale image,
+and a value for gamma, the function rescales every pixel to
+a value between 0 and 1. Each pixel value is then raised to
+the power of gamma before being cast back to an intiger between
+0 and 255. The code is shown below.
 
+%\lstinputlisting[language=Matlab]{Gcorrection.m}
+\begin{lstlisting}[language=Matlab]
+function [ img_out ] = Gcorrection(img_in, gama)
+%Does gamma correction using the equation:
+%   new=255*(old/255)^gamma
+    img_out=uint8(255*(double(img_in)/255).^gama);
+end
+\end{lstlisting}
 
-\subsection*{Part 1}
-
-\begin{verbatim}
-%1
-%The Gcorrection function
-type('Gcorrection.m')
-
-%2
+\subsection{Effects of Gamma Correction}
+The Gcorrection function was then used with varying gamma
+arguments on the same photo to show the effects of gamma
+being larger than, smaller than, and equal to, unity.
+When gamma was set to 1, the mean squared error between
+the original and altered image was computed, to show that
+when gamma is equal to 1, every value is mapped to itself.
+\begin{lstlisting}[language=Matlab]
 %read in the image
 pout=imread('Assignment_1_Files/pout.tif');
 figure
@@ -59,20 +78,29 @@ imshow(Gcorrection(pout,.4))
 title('\gamma=0.4')
 subplot(2,3,4)
 imhist(Gcorrection(pout,.4))
+
 %Plot unenhanced image and histogram
 subplot(2,3,2)
 imshow(Gcorrection(pout,1))
 title(sprintf('\\gamma=1\nMSE from original: %d',immse(pout,Gcorrection(pout,1))))
 subplot(2,3,5)
 imhist(Gcorrection(pout,1))
+
 %Plot 2.1 enhanced image and histogram
 subplot(2,3,3)
 imshow(Gcorrection(pout,2.1))
 title('\gamma=2.1')
 subplot(2,3,6)
 imhist(Gcorrection(pout,2.1))
+\end{lstlisting}
 
-%3
+
+\subsection{Histogram Equalization}
+Finally, Gamma correction was compared to histogram equalization
+using the photo MoonPhobos.tif. This photo has a bimodal
+distribution, with a concentration of pixel values near zero,
+and another near 255.
+\begin{lstlisting}[language=Matlab]
 %Read in new photo
 moonHobos=imread('Assignment_1_Files/MoonPhobos.tif');
 figure
@@ -92,16 +120,7 @@ title('\gamma=.3')
 subplot(1,2,2)
 imhist(histeq(moonHobos,256))
 title('HistEQ')
-\end{verbatim}
-
-        \color{lightgray} \begin{verbatim}
-function [ img_out ] = Gcorrection(img_in, gama)
-%Does gamma correction using the equation:
-%   new=2558(old/255)^gamma
-    img_out=uint8(255*(double(img_in)/255).^gama);
-end
-
-\end{verbatim} \color{black}
+\end{lstlisting}
 
 The Gcorrection function is given an input $\gamma$ less than 1,
 greater than 1 and equal to one. As seen in Figure \ref{pout}, when the
@@ -113,6 +132,7 @@ reference. When $\gamma=2.1 < 1$ the image pixel values are lower but
 occupy a larger range than the original image. 
 
 \begin{figure} [H]
+\centering
 \includegraphics [width=4in]{lab1_01.eps}
 \caption{Varying gamma in Gcorrection function}
 \label{pout}
@@ -129,18 +149,20 @@ and lighter details are maintained.
 
 
 \begin{figure} [H]
+\centering
 \includegraphics [width=4in]{lab1_02.eps}
 \caption{Gcorrection vs Histeq}
 \label{MoonHobos}
 \end{figure}
 
 \begin{figure} [H]
+\centering
 \includegraphics [width=4in]{lab1_03.eps}
 \caption{Histograms of Gcorrection vs Histeq}
 \label{moonHoboHist}
 \end{figure}
 
-\subsection*{Part 2}
+\section{Part 2}
 
 \begin{verbatim}
 %1
@@ -177,7 +199,7 @@ Warning: Image is too big to fit on screen; displaying at 67%
 \includegraphics [width=4in]{lab1_05.eps}
 
 
-\subsection*{Part 3}
+\section{Part 3}
 
 \begin{verbatim}
 %1
