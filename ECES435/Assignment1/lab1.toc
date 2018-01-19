@@ -1,11 +1,11 @@
-\contentsline {section}{\numberline {1}Contrast Enhancement}{2}
-\contentsline {subsection}{\numberline {1.1}Gamma Correction}{2}
-\contentsline {subsection}{\numberline {1.2}Effects of Gamma Correction}{2}
-\contentsline {subsection}{\numberline {1.3}Histogram Equalization}{3}
-\contentsline {section}{\numberline {2}High Frequency Content}{5}
-\contentsline {subsection}{\numberline {2.1}High Boot Filtering}{5}
-\contentsline {subsection}{\numberline {2.2}Effect of High Boost Filtering}{5}
-\contentsline {subsection}{\numberline {2.3}High Boost Filtering to Sharpen an Image}{5}
-\contentsline {section}{\numberline {3}Filtering Noise}{6}
-\contentsline {subsection}{\numberline {3.1}Average and Median Filtering}{6}
-\contentsline {subsection}{\numberline {3.2}Edge Detection and Noise}{7}
+\contentsline {section}{\numberline {1}Contrast Enhancement}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Gamma Correction}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Effects of Gamma Correction}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Histogram Equalization}{3}{subsection.1.3}
+\contentsline {section}{\numberline {2}High Frequency Content}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}High Boot Filtering}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Effect of High Boost Filtering}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}High Boost Filtering to Sharpen an Image}{5}{subsection.2.3}
+\contentsline {section}{\numberline {3}Filtering Noise}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Average and Median Filtering}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Edge Detection and Noise}{7}{subsection.3.2}

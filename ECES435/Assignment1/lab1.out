@@ -1,0 +1,11 @@
+\BOOKMARK [1][-]{section.1}{Contrast Enhancement}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Gamma Correction}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Effects of Gamma Correction}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Histogram Equalization}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{High Frequency Content}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{High Boot Filtering}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Effect of High Boost Filtering}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{High Boost Filtering to Sharpen an Image}{section.2}% 8
+\BOOKMARK [1][-]{section.3}{Filtering Noise}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{Average and Median Filtering}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Edge Detection and Noise}{section.3}% 11

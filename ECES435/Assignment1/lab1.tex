@@ -12,6 +12,9 @@
 \usepackage{algorithm2e}
 \usepackage{float}
 
+\usepackage{hyperref}
+\hypersetup{linktoc=all}
+
 \usepackage{listings}
 \usepackage{geometry}
 \geometry{margin=1in}
@@ -36,7 +39,10 @@
 \author{Brian Hosler \& Sarah Peachey }
 \maketitle 
 
-\abstract{Stuff about images and processing them}
+\abstract{In order to detect when images have been digitally manipulated,
+one must first have an understanding of how images can be maniputed. In this
+lab concepts such as contrast enhancement, high boost filtering, and edge
+detection were examined.} 
 \tableofcontents
 \newpage
 
@@ -208,15 +214,25 @@ title('\alpha=4')
 %High frequency noise added with increasing alpha(7)
 \end{lstlisting}
 
+During trial and error testing for the $\alpha$ value on the moon.tiff file
+an optimal value of 2.4 was selected. Values from zero to three with
+itations of 0.1 were scanned through. An optimal value was hard to select
+due to the small difference between successive images. 
+
+The concept of "in-focus" does not seem to be well described since we were
+never the "in-focus" image to compare to. We don't beleive it is possible to
+recover the original image because blurring is a nonlinear operation so the
+original pixel values can only be approximated. We also found that when
+$\alpha$ was increase above 7 high frequency noise became apparent.  
+
+
 \begin{figure} [H]
 \centering
 \includegraphics [width=3in]{lab1_04.eps}
 \includegraphics [width=3in]{lab1_05.eps}
-\caption{Varying gamma in Gcorrection function}
+\caption{Sharpened image using high boost filter}
 \label{pout}
 \end{figure}
-
-  
 
 
 \section{Filtering Noise}
@@ -267,7 +283,9 @@ title('Averaging 5x5')
 \end{lstlisting}
 
 \subsection{Edge Detection and Noise}
-In this section, the 
+In this section, the two denoising filters are compared for their
+edge preserving properties. 
+
 \begin{lstlisting}[language=Matlab]
 %Save the average and median filtered images
 pep1avg=uint8(filter2(ones(3,3)/9,pep1));
@@ -284,11 +302,43 @@ sy=filter2([-1,0,1;-2,0,2;-1,0,1].',pep1med).^2;%Ygradient
 imshow((sx+sy)>th)%Magnitude squared
 \end{lstlisting}
 
-\includegraphics [width=4in]{lab1_06.eps}
+As seen in Figure \ref{filter_noise} the $3 \ x \ 3$ filters result
+in sharper looking images as compared to the $5 \ x \ 5$. The $5 \ x \ 5$
+median filter begins to make the image look blurry; the $3 \ x \ 3$
+median filter is suffient. A median filter
+almost perfectly eliminates salt-n-peppa' noise, whereas the averaging
+filter is susceptible to outliers such as the salt-n-peppa' "flakes". The
+averaging filter performs better than median filter for eliminating Gaussian
+white noise. The noise has zero mean so it averages to the correct
+value.   
 
+\begin{figure} [H]
+\centering
+\includegraphics [width=0.4\textwidth]{peppersNoise1}
+\includegraphics [width=0.4\textwidth]{peppersNoise2}
+\caption{Pepper image with white noise (left) and salt-n-peppa' noise
+	(right)} 
+\label{peppa_noise}
+\end{figure}
+
+\begin{figure} [H]
+\centering
+\includegraphics [width=\textwidth]{lab1_06.eps}
+\caption{Median and averaging filter with two types of noise}
+\label{filter_noise}
+\end{figure}
+
+The median filter preserves more edges although it maintains more noise
+than averaging filter. Comparing to the original image Figure
+\ref{peppa_noise}, the noise appears to be incomplete edges caused by the
+median filtering of the Gaussian white noise. 
+
+\begin{figure} [H]
+\centering 
 \includegraphics [width=4in]{lab1_07.eps}
-
-
+\caption{Edge detection after median (right) and average (left) filter}
+\label{pepper_edges}
+\end{figure}
 
 \end{document}
     
