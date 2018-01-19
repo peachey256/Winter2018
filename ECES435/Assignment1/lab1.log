@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 JAN 2018 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 JAN 2018 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -246,7 +246,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen131
 \Gm@dimlist=\toks23
 )
-(./lab1.aux)
+(./lab1.aux
+
+LaTeX Warning: Label `pout' multiply defined.
+
+)
 \openout1 = `lab1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -261,8 +265,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
-
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
 \scratchdimen=\dimen132
@@ -455,7 +458,7 @@ o.pdf>
 (epstopdf)                    size: 45638 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_04
 -eps-converted-to.pdf Assignment_1_files/lab1_04.eps>
-(epstopdf)             \includegraphics on input line 212.
+(epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
 
 <Assignment_1_files/lab1_04-eps-converted-to.pdf, id=78, 469.755pt x 559.08875p
@@ -463,9 +466,8 @@ t>
 File: Assignment_1_files/lab1_04-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_04-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_04-eps-converted-to.pdf used o
-n input line 212.
-(pdftex.def)             Requested size: 289.07999pt x 344.05507pt.
- [5]
+n input line 213.
+(pdftex.def)             Requested size: 216.81pt x 258.03703pt.
 Package epstopdf Info: Source file: <Assignment_1_files/lab1_05.eps>
 (epstopdf)                    date: 2018-01-17 11:04:24
 (epstopdf)                    size: 1311693 bytes
@@ -478,15 +480,22 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 214.
 Package epstopdf Info: Output file is already uptodate.
 
-<Assignment_1_files/lab1_05-eps-converted-to.pdf, id=82, 685.56125pt x 527.9725
+<Assignment_1_files/lab1_05-eps-converted-to.pdf, id=79, 685.56125pt x 527.9725
 pt>
 File: Assignment_1_files/lab1_05-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_05-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_05-eps-converted-to.pdf used o
 n input line 214.
-(pdftex.def)             Requested size: 289.07999pt x 222.63312pt.
- [6 <./Assignment_1_files/lab1_04-eps-converted-to.pdf> <./Assignment_1_files/l
-ab1_05-eps-converted-to.pdf>]
+(pdftex.def)             Requested size: 216.81pt x 166.97282pt.
+ [5] [6 <./Assignment_1_files/lab1_04-eps-converted-to.pdf> <./Assignment_1_fil
+es/lab1_05-eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 274.
+
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 274.
 Package epstopdf Info: Source file: <Assignment_1_files/lab1_06.eps>
 (epstopdf)                    date: 2018-01-17 11:04:26
 (epstopdf)                    size: 4188667 bytes
@@ -496,7 +505,7 @@ o.pdf>
 (epstopdf)                    size: 170432 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_06
 -eps-converted-to.pdf Assignment_1_files/lab1_06.eps>
-(epstopdf)             \includegraphics on input line 270.
+(epstopdf)             \includegraphics on input line 281.
 Package epstopdf Info: Output file is already uptodate.
 
 <Assignment_1_files/lab1_06-eps-converted-to.pdf, id=106, 326.21875pt x 363.357
@@ -504,9 +513,8 @@ Package epstopdf Info: Output file is already uptodate.
 File: Assignment_1_files/lab1_06-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_06-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_06-eps-converted-to.pdf used o
-n input line 270.
+n input line 281.
 (pdftex.def)             Requested size: 289.07999pt x 322.01768pt.
- [7]
 Package epstopdf Info: Source file: <Assignment_1_files/lab1_07.eps>
 (epstopdf)                    date: 2018-01-17 11:04:26
 (epstopdf)                    size: 62319 bytes
@@ -516,27 +524,31 @@ o.pdf>
 (epstopdf)                    size: 20378 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment_1_files/lab1_07
 -eps-converted-to.pdf Assignment_1_files/lab1_07.eps>
-(epstopdf)             \includegraphics on input line 272.
+(epstopdf)             \includegraphics on input line 283.
 Package epstopdf Info: Output file is already uptodate.
 
-<Assignment_1_files/lab1_07-eps-converted-to.pdf, id=111, 436.63126pt x 189.708
+<Assignment_1_files/lab1_07-eps-converted-to.pdf, id=107, 436.63126pt x 189.708
 76pt>
 File: Assignment_1_files/lab1_07-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment_1_files/lab1_07-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment_1_files/lab1_07-eps-converted-to.pdf used o
-n input line 272.
+n input line 283.
 (pdftex.def)             Requested size: 289.07999pt x 125.59894pt.
- [8 <./Assignment_1_files/lab1_06-eps-converted-to.pdf> <./Assignment_1_files/l
-ab1_07-eps-converted-to.pdf>] (./lab1.aux) )
+ [7 <./Assignment_1_files/lab1_06-eps-converted-to.pdf>] [8 <./Assignment_1_fil
+es/lab1_07-eps-converted-to.pdf>] (./lab1.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5817 strings out of 492995
- 82457 string characters out of 6132704
- 248988 words of memory out of 5000000
- 9269 multiletter control sequences out of 15000+600000
+ 5842 strings out of 492995
+ 82828 string characters out of 6132704
+ 249027 words of memory out of 5000000
+ 9291 multiletter control sequences out of 15000+600000
  12506 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,42p,298b,3921s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -551,7 +563,7 @@ b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on lab1.pdf (8 pages, 777949 bytes).
+Output written on lab1.pdf (8 pages, 776923 bytes).
 PDF statistics:
  169 PDF objects out of 1000 (max. 8388607)
  103 compressed objects within 2 object streams

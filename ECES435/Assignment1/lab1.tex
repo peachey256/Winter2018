@@ -208,20 +208,31 @@ title('\alpha=4')
 %High frequency noise added with increasing alpha(7)
 \end{lstlisting}
 
-   
-\includegraphics [width=4in]{lab1_04.eps}
+\begin{figure} [H]
+\centering
+\includegraphics [width=3in]{lab1_04.eps}
+\includegraphics [width=3in]{lab1_05.eps}
+\caption{Varying gamma in Gcorrection function}
+\label{pout}
+\end{figure}
 
-\includegraphics [width=4in]{lab1_05.eps}
+  
 
 
-\section{Part 3}
-
-\begin{verbatim}
-%1
+\section{Filtering Noise}
+Different types of noise respond differently to different
+de-noising fiters. Two images were created by adding two
+different typs of noise to the same initial image.
+\subsection{Average and Median Filtering}
+The noisy images were filtered each with a 3x3 and a 5x5
+median filter. The images were also filtered with a 3x3
+and a 5x5 averaging filter.
+\begin{lstlisting}[language=Matlab]
 %Read in two noidy images
 pep1=imread('Assignment_1_Files/peppersNoise1.tiff');
 pep2=imread('Assignment_1_Files/peppersNoise2.tiff');
 figure
+
 %Denoise images with a 3x3 median filter
 subplot(4,2,1)
 imshow(medfilt2(pep1,[3,3]))
@@ -229,6 +240,7 @@ title(sprintf('peppersNoise1\nMedian 3x3'))
 subplot(4,2,2)
 imshow(medfilt2(pep2,[3,3]))
 title(sprintf('peppersNoise2\nMedian 3x3'))
+
 %Denoise images with a 5x5 median filter
 subplot(4,2,3)
 imshow(medfilt2(pep1,[5,5]))
@@ -236,6 +248,7 @@ title('Median 5x5')
 subplot(4,2,4)
 imshow(medfilt2(pep2,[5,5]))
 title('Median 5x5')
+
 %Denoise images with a 3x3 averaging filter
 subplot(4,2,5)
 imshow(uint8(filter2(ones(3,3)/9,pep1)))
@@ -243,6 +256,7 @@ title('Averaging 3x3')
 subplot(4,2,6)
 imshow(uint8(filter2(ones(3,3)/9,pep2)))
 title('Averaging 3x3')
+
 %Denoise images with a 5x5 averaging filter
 subplot(4,2,7)
 imshow(uint8(filter2(ones(5,5)/25,pep1)))
@@ -250,8 +264,11 @@ title('Averaging 5x5')
 subplot(4,2,8)
 imshow(uint8(filter2(ones(5,5)/25,pep2)))
 title('Averaging 5x5')
+\end{lstlisting}
 
-%2
+\subsection{Edge Detection and Noise}
+In this section, the 
+\begin{lstlisting}[language=Matlab]
 %Save the average and median filtered images
 pep1avg=uint8(filter2(ones(3,3)/9,pep1));
 pep1med=medfilt2(pep1,[3,3]);
@@ -265,7 +282,7 @@ subplot(1,2,2)
 sx=filter2([-1,0,1;-2,0,2;-1,0,1],pep1med).^2;%Xgradient
 sy=filter2([-1,0,1;-2,0,2;-1,0,1].',pep1med).^2;%Ygradient
 imshow((sx+sy)>th)%Magnitude squared
-\end{verbatim}
+\end{lstlisting}
 
 \includegraphics [width=4in]{lab1_06.eps}
 
