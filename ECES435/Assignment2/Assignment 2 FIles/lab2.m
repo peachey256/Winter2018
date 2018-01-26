@@ -40,7 +40,6 @@ temp=imfinfo('pep50.jpg');
 pep_size(4)=temp.FileSize; 
 pep_psnr(4)= psnr(imread('pep50.jpg'), pep);
 
-
 temp=imfinfo('pep30.jpg'); 
 pep_size(5)=temp.FileSize; 
 pep_psnr(5)= psnr(imread('pep30.jpg'), pep);
@@ -52,13 +51,13 @@ pep_psnr(6)= psnr(imread('pep10.jpg'), pep);
 
 figure 
 subplot(2,1,1)
-plot([1 .9 .7 .5 .3 .1],pep_size)
+plot(100*[1 .9 .7 .5 .3 .1],pep_size,'--o')
 hold on 
-title('file size vs quality')
+title('peppers - file size vs quality')
 subplot(2,1,2)
-plot([1 .9 .7 .5 .3 .1],pep_psnr)
+plot(100*[1 .9 .7 .5 .3 .1],pep_psnr,'--o')
 hold on 
-title('psnr vs quality')
+title('peppers - psnr vs quality')
 
 bab_psnr=zeros(1,6); 
 bab_size=zeros(1,6); 
@@ -79,23 +78,20 @@ temp=imfinfo('bab50.jpg');
 bab_size(4)=temp.FileSize; 
 bab_psnr(4)= psnr(imread('bab50.jpg'), bab);
 
-
 temp=imfinfo('bab30.jpg'); 
 bab_size(5)=temp.FileSize; 
 bab_psnr(5)= psnr(imread('bab30.jpg'), bab);
-
 
 temp=imfinfo('bab10.jpg'); 
 bab_size(6)=temp.FileSize; 
 bab_psnr(6)= psnr(imread('bab10.jpg'), bab);
 
-
 figure 
 subplot(2,1,1)
-plot([1 .9 .7 .5 .3 .1],bab_size)
+plot(100*[1 .9 .7 .5 .3 .1],bab_size,'--o')
 hold on 
-title('file size vs quality')
+title('baboon - file size vs quality')
 subplot(2,1,2)
-plot([1 .9 .7 .5 .3 .1],bab_psnr)
+plot(100*[1 .9 .7 .5 .3 .1],bab_psnr,'--o')
 hold on 
-title('psnr vs quality')
+title('baboon - psnr vs quality')
