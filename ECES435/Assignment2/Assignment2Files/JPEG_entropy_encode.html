@@ -1,0 +1,114 @@
+<html> <title> JPEG Entropy Process </title>   <H1> <center> <font color="#800000"><b> JPEG Entropy Encoding Process </b></font> </center></H1><br>
+ <br> Height: <I>512 </I> <br> Width: <I>512</I> 
+ <br> DCT Block size: <I>8X8</I>
+ <br> Number of block: <I>4096</I> <br> 
+ <br> <b> <I> DC Frequency </I></b> 
+ <table border=1 cellspacing=0 cellpadding=0 > 
+ <tr> <td width=50> <b> Size </b> </td> 
+ <td  width=50> 0 </td>  <td  width=50> 1 </td>  <td  width=50> 2 </td>  <td  width=50> 3 </td>  <td  width=50> 4 </td>  <td  width=50> 5 </td>  <td  width=50> 6 </td>  <td  width=50> 7 </td>  <td  width=50> 8 </td>  <td  width=50> 9 </td>  <td  width=50> 10 </td>  <td  width=50> 11 </td>  <td  width=50> 12 </td>  <td  width=50> 13 </td>  <td  width=50> 14 </td>  <td  width=50> 15 </td>  <td  width=50> 16 </td> 
+ </tr> <tr> <td width=50> <b> Frenquency </b> </td> 
+ <td> 295 </td>  <td> 0 </td>  <td> 0 </td>  <td> 0 </td>  <td> 0 </td>  <td> 556 </td>  <td> 931 </td>  <td> 1161 </td>  <td> 874 </td>  <td> 254 </td>  <td> 25 </td>  <td> 0 </td>  <td> 0 </td>  <td> 0 </td>  <td> 0 </td>  <td> 0 </td>  <td> 0 </td>  </tr> <br> </table>
+ <br> <b><I> DC Huffman Table </I></b> 
+ <table border=1 cellspacing=0 cellpadding=0 > 
+ <tr> <td width=50> <b> Size  </b></td> <td width=300> <b> Huffman Code </b></td></tr>
+ <tr> <td width=50> 6 </td> <td width=300>01 </td> </tr> 
+ <tr> <td width=50> 7 </td> <td width=300>11 </td> </tr> 
+ <tr> <td width=50> 8 </td> <td width=300>00 </td> </tr> 
+ <tr> <td width=50> 5 </td> <td width=300>100 </td> </tr> 
+ <tr> <td width=50> 0 </td> <td width=300>1011 </td> </tr> 
+ <tr> <td width=50> 9 </td> <td width=300>10101 </td> </tr> 
+ <tr> <td width=50> 10 </td> <td width=300>10100 </td> </tr> 
+ </table> 
+ <br> <b> <I> AC Frequency </I></b> <I> EOB: </I> 00 <I> ZRL</I> f0
+ <table border=1 cellspacing=0 cellpadding=0 > 
+ <tr> <td width=50> <b> ZRL/Size </b></td>  <td  width=50> <b>0 </b> </td>  <td  width=50> <b>1 </b> </td>  <td  width=50> <b>2 </b> </td>  <td  width=50> <b>3 </b> </td>  <td  width=50> <b>4 </b> </td>  <td  width=50> <b>5 </b> </td>  <td  width=50> <b>6 </b> </td>  <td  width=50> <b>7 </b> </td>  <td  width=50> <b>8 </b> </td>  <td  width=50> <b>9 </b> </td>  <td  width=50> <b>a </b> </td>  <td  width=50> <b>b </b> </td>  <td  width=50> <b>c </b> </td>  <td  width=50> <b>d </b> </td>  <td  width=50> <b>e </b> </td>  <td  width=50> <b>f </b> </td>  </tr> 
+ <tr> <td width=50> <b> 0 </b> </td>  <td width=50> 4096 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 6951 </td>  <td width=50> 13890 </td>  <td width=50> 12927 </td>  <td width=50> 5905 </td>  <td width=50> 759 </td>  <td width=50> 20 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> 1 </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 1583 </td>  <td width=50> 3594 </td>  <td width=50> 2581 </td>  <td width=50> 896 </td>  <td width=50> 48 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> 2 </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 456 </td>  <td width=50> 1448 </td>  <td width=50> 942 </td>  <td width=50> 325 </td>  <td width=50> 10 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> 3 </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 165 </td>  <td width=50> 920 </td>  <td width=50> 489 </td>  <td width=50> 174 </td>  <td width=50> 7 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> 4 </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 38 </td>  <td width=50> 536 </td>  <td width=50> 279 </td>  <td width=50> 120 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> 5 </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 21 </td>  <td width=50> 351 </td>  <td width=50> 259 </td>  <td width=50> 104 </td>  <td width=50> 1 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> 6 </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 13 </td>  <td width=50> 192 </td>  <td width=50> 239 </td>  <td width=50> 79 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> 7 </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 4 </td>  <td width=50> 94 </td>  <td width=50> 257 </td>  <td width=50> 67 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> 8 </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 58 </td>  <td width=50> 234 </td>  <td width=50> 88 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> 9 </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 29 </td>  <td width=50> 109 </td>  <td width=50> 121 </td>  <td width=50> 1 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> a </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 21 </td>  <td width=50> 78 </td>  <td width=50> 116 </td>  <td width=50> 3 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> b </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 10 </td>  <td width=50> 37 </td>  <td width=50> 92 </td>  <td width=50> 1 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> c </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 6 </td>  <td width=50> 33 </td>  <td width=50> 100 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> d </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 3 </td>  <td width=50> 8 </td>  <td width=50> 115 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> e </b> </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 3 </td>  <td width=50> 5 </td>  <td width=50> 44 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+ <tr> <td width=50> <b> f </b> </td>  <td width=50> 62 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 2 </td>  <td width=50> 9 </td>  <td width=50> 15 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  <td width=50> 0 </td>  </tr> 
+  </table>  <br> 
+ <br> <b><I> AD Huffman Table </I></b> 
+ <table border=1 cellspacing=0 cellpadding=0 > 
+ <tr> <td width=50> <b> ZRL/Size </b></td> <td width=300> <b> Huffman Code </b></td></tr>
+ <tr> <td width=50> 05 </td> <td width=300>01 </td> </tr> 
+ <tr> <td width=50> 06 </td> <td width=300>00 </td> </tr> 
+ <tr> <td width=50> 04 </td> <td width=300>100 </td> </tr> 
+ <tr> <td width=50> 00 </td> <td width=300>1100 </td> </tr> 
+ <tr> <td width=50> 07 </td> <td width=300>1110 </td> </tr> 
+ <tr> <td width=50> 15 </td> <td width=300>1010 </td> </tr> 
+ <tr> <td width=50> 16 </td> <td width=300>11011 </td> </tr> 
+ <tr> <td width=50> 14 </td> <td width=300>111110 </td> </tr> 
+ <tr> <td width=50> 25 </td> <td width=300>111100 </td> </tr> 
+ <tr> <td width=50> 26 </td> <td width=300>101110 </td> </tr> 
+ <tr> <td width=50> 35 </td> <td width=300>101100 </td> </tr> 
+ <tr> <td width=50> 08 </td> <td width=300>1111011 </td> </tr> 
+ <tr> <td width=50> 17 </td> <td width=300>1111111 </td> </tr> 
+ <tr> <td width=50> 24 </td> <td width=300>1011010 </td> </tr> 
+ <tr> <td width=50> 36 </td> <td width=300>1011111 </td> </tr> 
+ <tr> <td width=50> 45 </td> <td width=300>1101001 </td> </tr> 
+ <tr> <td width=50> 27 </td> <td width=300>11010110 </td> </tr> 
+ <tr> <td width=50> 46 </td> <td width=300>11010100 </td> </tr> 
+ <tr> <td width=50> 55 </td> <td width=300>11110100 </td> </tr> 
+ <tr> <td width=50> 56 </td> <td width=300>11010001 </td> </tr> 
+ <tr> <td width=50> 66 </td> <td width=300>10111100 </td> </tr> 
+ <tr> <td width=50> 76 </td> <td width=300>11010000 </td> </tr> 
+ <tr> <td width=50> 86 </td> <td width=300>10110110 </td> </tr> 
+ <tr> <td width=50> 34 </td> <td width=300>110101110 </td> </tr> 
+ <tr> <td width=50> 37 </td> <td width=300>111101010 </td> </tr> 
+ <tr> <td width=50> 47 </td> <td width=300>101101111 </td> </tr> 
+ <tr> <td width=50> 65 </td> <td width=300>111111000 </td> </tr> 
+ <tr> <td width=50> 97 </td> <td width=300>101111010 </td> </tr> 
+ <tr> <td width=50> 57 </td> <td width=300>1111110100 </td> </tr> 
+ <tr> <td width=50> 67 </td> <td width=300>1101010111 </td> </tr> 
+ <tr> <td width=50> 75 </td> <td width=300>1111010111 </td> </tr> 
+ <tr> <td width=50> 77 </td> <td width=300>1011110111 </td> </tr> 
+ <tr> <td width=50> 85 </td> <td width=300>1011011100 </td> </tr> 
+ <tr> <td width=50> 87 </td> <td width=300>1101011111 </td> </tr> 
+ <tr> <td width=50> 96 </td> <td width=300>1111110101 </td> </tr> 
+ <tr> <td width=50> a6 </td> <td width=300>1101010110 </td> </tr> 
+ <tr> <td width=50> a7 </td> <td width=300>1111110111 </td> </tr> 
+ <tr> <td width=50> b7 </td> <td width=300>1111010110 </td> </tr> 
+ <tr> <td width=50> c7 </td> <td width=300>1111110011 </td> </tr> 
+ <tr> <td width=50> d7 </td> <td width=300>1111110110 </td> </tr> 
+ <tr> <td width=50> f0 </td> <td width=300>1011110110 </td> </tr> 
+ <tr> <td width=50> 18 </td> <td width=300>11111100100 </td> </tr> 
+ <tr> <td width=50> 44 </td> <td width=300>11010101010 </td> </tr> 
+ <tr> <td width=50> 95 </td> <td width=300>10110111010 </td> </tr> 
+ <tr> <td width=50> b6 </td> <td width=300>11010101001 </td> </tr> 
+ <tr> <td width=50> c6 </td> <td width=300>11010101000 </td> </tr> 
+ <tr> <td width=50> e7 </td> <td width=300>11010111101 </td> </tr> 
+ <tr> <td width=50> 09 </td> <td width=300>110101010111 </td> </tr> 
+ <tr> <td width=50> 54 </td> <td width=300>110101111001 </td> </tr> 
+ <tr> <td width=50> a5 </td> <td width=300>110101111000 </td> </tr> 
+ <tr> <td width=50> f7 </td> <td width=300>101101110110 </td> </tr> 
+ <tr> <td width=50> 28 </td> <td width=300>1111110010100 </td> </tr> 
+ <tr> <td width=50> 64 </td> <td width=300>1111110010110 </td> </tr> 
+ <tr> <td width=50> b5 </td> <td width=300>1101010101101 </td> </tr> 
+ <tr> <td width=50> d6 </td> <td width=300>1011011101110 </td> </tr> 
+ <tr> <td width=50> f6 </td> <td width=300>1011011101111 </td> </tr> 
+ <tr> <td width=50> 38 </td> <td width=300>11111100101111 </td> </tr> 
+ <tr> <td width=50> c5 </td> <td width=300>11111100101011 </td> </tr> 
+ <tr> <td width=50> e6 </td> <td width=300>11010101011001 </td> </tr> 
+ <tr> <td width=50> 74 </td> <td width=300>111111001011101 </td> </tr> 
+ <tr> <td width=50> a8 </td> <td width=300>111111001011100 </td> </tr> 
+ <tr> <td width=50> d5 </td> <td width=300>111111001010101 </td> </tr> 
+ <tr> <td width=50> e5 </td> <td width=300>111111001010100 </td> </tr> 
+ <tr> <td width=50> f5 </td> <td width=300>110101010110000 </td> </tr> 
+ <tr> <td width=50> 58 </td> <td width=300>1101010101100010 </td> </tr> 
+ </table> 
+ <br> <b> <I> Block Status </I> </b> <br> 
+ <br> <b> Block 0 </b> <br> <table border=1 cellspacing=0 cellpadding=0 > 
+ <tr> <td width=100> <b>Zigzag Data </b> </td> <td width=800>672 66 -24 0 24 -60 32 70 -26 14 18 17 -48 76 -24 -40 52 24 0 0 0 0 0 0 0 80 0 51 0 -60 57 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 62 0 0 0 0 0 0 0 0 0 0  </td> </tr> 
+ <tr> <td width=100> <b> <font color="#008000"> <I> ZRL/Size </I></font> <font color="#000080"> Value </b> </td> <td width=800> <b>DC:</b> <font color="#604000"> <I>10 </I> </font>  <font color="#400060"> 672 </font>  <font color="#000000"> <b> AC: </b> </font>  <font color="#008000"> <I> 50000 </I></font>  <font color="#000080"> 66 </font>  <font color="#008000"> <I> 150000 </I></font>  <font color="#000080"> 24 </font>  <font color="#008000"> <I> 60000 </I></font>  <font color="#000080"> 24 </font>  <font color="#008000"> <I> 60000 </I></font>  <font color="#000080"> 60 </font>  <font color="#008000"> <I> 70000 </I></font>  <font color="#000080"> 32 </font>  <font color="#008000"> <I> 50000 </I></font>  <font color="#000080"> 70 </font>  <font color="#008000"> <I> 40000 </I></font>  <font color="#000080"> 26 </font>  <font color="#008000"> <I> 50000 </I></font>  <font color="#000080"> 14 </font>  <font color="#008000"> <I> 50000 </I></font>  <font color="#000080"> 18 </font>  <font color="#008000"> <I> 60000 </I></font>  <font color="#000080"> 17 </font>  <font color="#008000"> <I> 70000 </I></font>  <font color="#000080"> 48 </font>  <font color="#008000"> <I> 50000 </I></font>  <font color="#000080"> 76 </font>  <font color="#008000"> <I> 60000 </I></font>  <font color="#000080"> 24 </font>  <font color="#008000"> <I> 60000 </I></font>  <font color="#000080"> 40 </font>  <font color="#008000"> <I> 50000 </I></font>  <font color="#000080"> 52 </font>  <font color="#008000"> <I> 770000 </I></font>  <font color="#000080"> 24 </font>  <font color="#008000"> <I> 160000 </I></font>  <font color="#000080"> 80 </font>  <font color="#008000"> <I> 160000 </I></font>  <font color="#000080"> 51 </font>  <font color="#008000"> <I> 60000 </I></font>  <font color="#000080"> 60 </font>  <font color="#008000"> <I> f00000 </I></font>  <font color="#000080"> 57 </font>  <font color="#008000"> <I> 660000 </I></font>  <font color="#000080"> 0 </font>  <tr> <td width=100> <b> Huffman bitstream </b> </td> <td width=800>

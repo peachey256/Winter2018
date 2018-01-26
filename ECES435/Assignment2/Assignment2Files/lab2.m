@@ -109,9 +109,9 @@ Q=[16 11 10 16 24 40 51 61;...
 
 A=myJpgEncode( pep,Q );
 figure
-imshow(myJpgDecode())
+imshow([uint8(myJpgDecode()),pep])
 
 B=myJpgEncode( bab,Q );
 figure
-imshow(myJpgDecode())
+imshow([uint8(myJpgDecode()),bab])
 

@@ -62,8 +62,8 @@ end
 status=fclose(fid_out);
 
 % execute the jpeg entropy program
-!open encode.app
-pause
+!wine jpeg_entropy_encode.exe
+
 [fid,message]=fopen(strcat(encoder_path,'JPEG.jpg'),'r');
 status = fseek(fid,0,'eof');
 Len=ftell(fid);
