@@ -5,7 +5,7 @@ clear
 close all
 clc
 
-%% part 1 
+%% part 1 - see jpeg image quality compression 
 pep=imread('peppers.tif'); 
 bab=imread('baboon.tif');
 
@@ -40,11 +40,9 @@ temp=imfinfo('pep50.jpg');
 pep_size(4)=temp.FileSize; 
 pep_psnr(4)= psnr(imread('pep50.jpg'), pep);
 
-
 temp=imfinfo('pep30.jpg'); 
 pep_size(5)=temp.FileSize; 
 pep_psnr(5)= psnr(imread('pep30.jpg'), pep);
-
 
 temp=imfinfo('pep10.jpg'); 
 pep_size(6)=temp.FileSize; 
@@ -52,9 +50,13 @@ pep_psnr(6)= psnr(imread('pep10.jpg'), pep);
 
 figure 
 subplot(2,1,1)
-plot(pep_size)
-title('file size vs quality')
-plot(pep_psnr)
+plot(100*[1 .9 .7 .5 .3 .1],pep_size,'--o')
+hold on 
+title('peppers - file size vs quality')
+subplot(2,1,2)
+plot(100*[1 .9 .7 .5 .3 .1],pep_psnr,'--o')
+hold on 
+title('peppers - psnr vs quality')
 
 bab_psnr=zeros(1,6); 
 bab_size=zeros(1,6); 
@@ -75,16 +77,35 @@ temp=imfinfo('bab50.jpg');
 bab_size(4)=temp.FileSize; 
 bab_psnr(4)= psnr(imread('bab50.jpg'), bab);
 
-
 temp=imfinfo('bab30.jpg'); 
 bab_size(5)=temp.FileSize; 
 bab_psnr(5)= psnr(imread('bab30.jpg'), bab);
-
 
 temp=imfinfo('bab10.jpg'); 
 bab_size(6)=temp.FileSize; 
 bab_psnr(6)= psnr(imread('bab10.jpg'), bab);
 
+figure 
+subplot(2,1,1)
+plot(100*[1 .9 .7 .5 .3 .1],bab_size,'--o')
+hold on 
+title('baboon - file size vs quality')
+subplot(2,1,2)
+plot(100*[1 .9 .7 .5 .3 .1],bab_psnr,'--o')
+hold on 
+title('baboon - psnr vs quality')
 
-plot(bab_size)
-plot(bab_psnr)
+%% part 2 - do out own jpeg 
+
+% luminance quantization table 
+Q=[16 11 10 16 24 40 51 61;... 
+   12 12 14 19 26 58 60 55;... 
+   14 13 16 24 40 57 69 56;...
+   14 17 22 29 51 87 80 62;...
+   18 22 37 56 68 109 103 77;...
+   24 35 55 64 81 104 113 92;...
+   49 64 78 87 103 121 120 101;...
+   72 92 95 98 112 100 103 99];
+
+fuck=myJpgEncode( pep,Q ); 
+

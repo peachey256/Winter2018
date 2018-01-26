@@ -5,7 +5,7 @@ clear
 close all
 clc
 
-%% part 1 
+%% part 1 - see jpeg image quality compression 
 pep=imread('peppers.tif'); 
 bab=imread('baboon.tif');
 
@@ -43,7 +43,6 @@ pep_psnr(4)= psnr(imread('pep50.jpg'), pep);
 temp=imfinfo('pep30.jpg'); 
 pep_size(5)=temp.FileSize; 
 pep_psnr(5)= psnr(imread('pep30.jpg'), pep);
-
 
 temp=imfinfo('pep10.jpg'); 
 pep_size(6)=temp.FileSize; 
@@ -95,3 +94,27 @@ subplot(2,1,2)
 plot(100*[1 .9 .7 .5 .3 .1],bab_psnr,'--o')
 hold on 
 title('baboon - psnr vs quality')
+
+%% part 2 - do out own jpeg 
+
+% luminance quantization table 
+Q=[16 11 10 16 24 40 51 61;... 
+   12 12 14 19 26 58 60 55;... 
+   14 13 16 24 40 57 69 56;...
+   14 17 22 29 51 87 80 62;...
+   18 22 37 56 68 109 103 77;...
+   24 35 55 64 81 104 113 92;...
+   49 64 78 87 103 121 120 101;...
+   72 92 95 98 112 100 103 99];
+
+A=myJpgEncode( pep,Q ); 
+B=myJpgEncode( bab,Q ); 
+
+figure 
+subplot(1,2,1)
+imshow(A)
+title('DCT of peppers')
+subplot(1,2,2)
+imshow(B)
+title('DCT of baboon')
+
