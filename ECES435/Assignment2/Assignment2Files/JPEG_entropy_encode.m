@@ -62,7 +62,7 @@ end
 status=fclose(fid_out);
 
 % execute the jpeg entropy program
-!wine jpeg_entropy_encode.exe
+!/usr/local/bin/wine JPEG_entropy_encode.exe
 
 [fid,message]=fopen(strcat(encoder_path,'JPEG.jpg'),'r');
 status = fseek(fid,0,'eof');

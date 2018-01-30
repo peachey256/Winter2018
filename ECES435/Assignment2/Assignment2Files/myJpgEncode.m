@@ -12,7 +12,7 @@ for i=1:512/8
 end
 
 result=JPEG_entropy_encode(512,512,8,Q,stor,...
-    '/Users/brianhosler/Documents/Drexel/17-18/Winter/ECES435/Winter2018/ECES435/Assignment2/Assignment2Files/',0);
+    '/Users/brianhosler/Documents/Drexel/17-18/Winter/ECES435/Winter2018/ECES435/Assignment2/Assignment2Files/',1);
 
 
 end

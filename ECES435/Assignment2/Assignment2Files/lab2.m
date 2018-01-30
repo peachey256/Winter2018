@@ -1,9 +1,6 @@
 % Assignment 2 
 % Jan 26, 2017 
 % Brian Hosler & Sarah Peachey 
-clear
-close all
-clc
 
 %% part 1 - see jpeg image quality compression 
 pep=imread('peppers.tif'); 
@@ -95,8 +92,11 @@ plot(100*[1 .9 .7 .5 .3 .1],bab_psnr,'--o')
 hold on 
 title('baboon - psnr vs quality')
 
-%% part 2 - do out own jpeg 
+%% part 2 - do our own jpeg 
+type('myJpgEncode.m')
+type('myJpgDecode.m')
 
+%% Part 3 Evaluating Quantization Tables
 % luminance quantization table 
 Q=[16 11 10 16 24 40 51 61;... 
    12 12 14 19 26 58 60 55;... 
@@ -107,11 +107,38 @@ Q=[16 11 10 16 24 40 51 61;...
    49 64 78 87 103 121 120 101;...
    72 92 95 98 112 100 103 99];
 
+tempQ=zeros(8);
+for i=1:512/8
+    for j=1:512/8
+        tempQ=tempQ+abs(dct2(pep(8*(i-1)+1:i*8,8*(j-1)+1:j*8)));
+    end
+end
+DCTs=tempQ/4096;
+nrm1=max(max(DCTs))./DCTs;
+Q2=double(uint8(nrm1.^.65));
+
+stor=[];
+for i=1:512/8
+    for j=1:512/8
+        tempA=dct2(pep(8*(i-1)+1:i*8,8*(j-1)+1:j*8));
+        stor=[stor;ZigzagMtx2Vector(tempA)];
+    end
+end
+vrnce=Vector2ZigzagMtx(var(stor));
+nrm2=max(max(vrnce))./vrnce;
+Q3=double(uint8(log(nrm2).^2))+1;
+
 A=myJpgEncode( pep,Q );
-figure
-imshow([uint8(myJpgDecode()),pep])
+jpg1=uint8(myJpgDecode());
+psnr(pep,jpg1)
 
-B=myJpgEncode( bab,Q );
-figure
-imshow([uint8(myJpgDecode()),bab])
+B=myJpgEncode( pep,Q2 );
+jpg2=uint8(myJpgDecode());
+psnr(pep,jpg2)
 
+C=myJpgEncode( pep,Q3 );
+jpg3=uint8(myJpgDecode());
+psnr(pep,jpg3)
+
+figure
+imshow([pep,jpg1;jpg2,jpg3])

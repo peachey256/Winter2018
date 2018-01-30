@@ -16,7 +16,7 @@ function [rowN,colN,dct_block_size,iQ,iZZDCTQIm]=JPEG_entropy_decode(decoder_pat
 % Date: 8/1/02
 
 % execute the jpeg entropy program
-!wine jpeg_entropy_decode.exe
+!/usr/local/bin/wine JPEG_entropy_decode.exe
 
 % open decoded file by jpeg_entropy_decode
 [fid_in,message]=fopen(strcat(decoder_path,'JPEG_iDCTQ_ZZ.txt'),'r');
