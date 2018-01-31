@@ -6,32 +6,45 @@
 \usepackage{graphicx}
 \usepackage{color}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{algorithm2e}
+\usepackage{float}
+
+\usepackage{hyperref}
+\hypersetup{linktoc=all}
+
+\usepackage{listings}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+\lstset{numbers=right, 
+                numberstyle=\tiny, 
+                breaklines=true,
+                backgroundcolor=\color{light-gray},
+                numbersep=5pt,
+                xleftmargin=.5in,
+                xrightmargin=.5in} 
+
 \sloppy
 \definecolor{lightgray}{gray}{0.5}
 \setlength{\parindent}{0pt}
 
 \begin{document}
 
-    
-    
-\subsection*{Contents}
+\title{Lab 2: JPEG Compression}
+\author{Brian Hosler \& Sarah Peachey }
+\maketitle 
 
-\begin{itemize}
-\setlength{\itemsep}{-1ex}
-   \item part 1 - see jpeg image quality compression
-   \item part 2 - do our own jpeg
-   \item Part 3 Evaluating Quantization Tables
-\end{itemize}
-\begin{verbatim}
-% Assignment 2
-% Jan 26, 2017
-% Brian Hosler & Sarah Peachey
-\end{verbatim}
+\abstract{}
+\tableofcontents
+\newpage
 
+\section{JPEG Quality Factor}
 
-\subsection*{part 1 - see jpeg image quality compression}
-
-\begin{verbatim}
+\begin{lstlisting}[language=Matlab]
 pep=imread('peppers.tif');
 bab=imread('baboon.tif');
 
@@ -120,21 +133,17 @@ subplot(2,1,2)
 plot(100*[1 .9 .7 .5 .3 .1],bab_psnr,'--o')
 hold on
 title('baboon - psnr vs quality')
-\end{verbatim}
+\end{lstlisting}
 
 \includegraphics [width=4in]{lab2_01.eps}
 
 \includegraphics [width=4in]{lab2_02.eps}
 
 
-\subsection*{part 2 - do our own jpeg}
+\section{Writing JPEG compression in matlab}
 
-\begin{verbatim}
-type('myJpgEncode.m')
-type('myJpgDecode.m')
-\end{verbatim}
-
-        \color{lightgray} \begin{verbatim}
+\subsection*{myJpgEncode.m}
+\begin{lstlisting}[language=Matlab]
 function [result] = myJpgEncode( pep,Q )
 %myJpgEncode implement my own jpeg algorithm
 %   using the notes 
@@ -147,19 +156,17 @@ for i=1:512/8
         stor=[stor;ZigzagMtx2Vector(pep_quan)];
     end 
 end
-
-result=JPEG_entropy_encode(512,512,8,Q,stor,...
-    '/Users/brianhosler/Documents/Drexel/17-18/Winter/ECES435/Winter2018/ECES435/Assignment2/Assignment2Files/',1);
-
-
+result=JPEG_entropy_encode(512,512,8,Q,stor,'./',1);
 end
+\end{lstlisting}
 
 
+\subsection*{myJpgDecode.m}
+\begin{lstlisting}[language=Matlab]
 function [pep] = myJpgDecode()
 %myJpgEncode implement my own jpeg algorithm
 %   using the notes 
-[rowN,colN,dct_block_size,iQ,iZZDCTQIm]=JPEG_entropy_decode(...
-    '/Users/brianhosler/Documents/Drexel/17-18/Winter/ECES435/Winter2018/ECES435/Assignment2/Assignment2Files/');
+[rowN,colN,dct_block_size,iQ,iZZDCTQIm]=JPEG_entropy_decode('./');
 pep=zeros(512);
 ndx=1;
 for i=1:512/8
@@ -169,16 +176,11 @@ for i=1:512/8
     end 
 end 
 end
+\end{lstlisting}
 
-\end{verbatim} \color{black}
-    
+\section{Evaluating Quantization Tables}
 
-\subsection*{Part 3 Evaluating Quantization Tables}
-
-\begin{par}
-luminance quantization table
-\end{par} \vspace{1em}
-\begin{verbatim}
+\begin{lstlisting}[language=Matlab]
 Q=[16 11 10 16 24 40 51 61;...
    12 12 14 19 26 58 60 55;...
    14 13 16 24 40 57 69 56;...
@@ -223,31 +225,33 @@ psnr(pep,jpg3)
 
 figure
 imshow([pep,jpg1;jpg2,jpg3])
-\end{verbatim}
+\end{lstlisting}
 
-        \color{lightgray} \begin{verbatim}/usr/local/bin/wine JPEG_entropy_encode.exe: Signal 120
+\begin{table}[H]
+\centering
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Q-Table & Compressed Size(kB) & PSNR(dB) \\ 
+ \hline
+ Standard 	& 44.7 & 36.27 \\ 
+ Mean 		& 33.1 & 36.33 \\ 
+ Variance 	& 23.7 & 34.40 \\ 
+ \hline
+\end{tabular}
+\caption{Comparison of Different JPEG Quantization Tables Used}
+\label{snrTab}
+\end{table}
 
-ans =
-
-   36.2761
-
-/usr/local/bin/wine JPEG_entropy_encode.exe: Signal 120
-
-ans =
-
-   36.3328
-
-/usr/local/bin/wine JPEG_entropy_encode.exe: Signal 120
-
-ans =
-
-   34.3979
-
-Warning: Image is too big to fit on screen; displaying at 50% 
-\end{verbatim} \color{black}
-    
+   
+\begin{figure}[H]
+\centering
 \includegraphics [width=4in]{lab2_03.eps}
-
+\caption{Resultant image after no JPEG compression(top-left),
+compression using the JPEG standard quantization table(top-right),
+compression using a quantization table based on the mean magnitude of the DCT coefficients(bottom-left), and
+compression using a quantization table derived from the DCT coefficients' variences(bottom-right).}
+\label{jpgTables}
+\end{figure}
 
 
 \end{document}
