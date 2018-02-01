@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 JAN 2018 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 FEB 2018 12:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab2
+**lab2.tex
 (./lab2.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
@@ -352,20 +352,20 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 (./lab2.aux)
 \openout1 = `lab2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -399,7 +399,7 @@ e
 ))
 \c@lstlisting=\count132
 \AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 33.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -409,9 +409,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count133
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
 
 (./lab2.out) (./lab2.out)
 \@outlinefile=\write3
@@ -452,11 +452,11 @@ LaTeX Info: Redefining \nameref on input line 35.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 40.
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 40.
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -471,104 +471,191 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
- [2]
-Package epstopdf Info: Source file: <lab2_01.eps>
-(epstopdf)                    date: 2018-01-30 18:43:15
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+ [2] [3]
+<Assignment2Files/pep90.jpg, id=139, 513.92pt x 513.92pt>
+File: Assignment2Files/pep90.jpg Graphic file (type jpg)
+
+<use Assignment2Files/pep90.jpg>
+Package pdftex.def Info: Assignment2Files/pep90.jpg used on input line 159.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+
+<Assignment2Files/bab90.jpg, id=140, 513.92pt x 513.92pt>
+File: Assignment2Files/bab90.jpg Graphic file (type jpg)
+
+<use Assignment2Files/bab90.jpg>
+Package pdftex.def Info: Assignment2Files/bab90.jpg used on input line 161.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+
+<Assignment2Files/pep70.jpg, id=141, 513.92pt x 513.92pt>
+File: Assignment2Files/pep70.jpg Graphic file (type jpg)
+
+<use Assignment2Files/pep70.jpg>
+Package pdftex.def Info: Assignment2Files/pep70.jpg used on input line 164.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+
+<Assignment2Files/bab70.jpg, id=142, 513.92pt x 513.92pt>
+File: Assignment2Files/bab70.jpg Graphic file (type jpg)
+
+<use Assignment2Files/bab70.jpg>
+Package pdftex.def Info: Assignment2Files/bab70.jpg used on input line 166.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+
+<Assignment2Files/pep50.jpg, id=143, 513.92pt x 513.92pt>
+File: Assignment2Files/pep50.jpg Graphic file (type jpg)
+
+<use Assignment2Files/pep50.jpg>
+Package pdftex.def Info: Assignment2Files/pep50.jpg used on input line 169.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+
+<Assignment2Files/bab50.jpg, id=144, 513.92pt x 513.92pt>
+File: Assignment2Files/bab50.jpg Graphic file (type jpg)
+
+<use Assignment2Files/bab50.jpg>
+Package pdftex.def Info: Assignment2Files/bab50.jpg used on input line 171.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+
+<Assignment2Files/pep30.jpg, id=145, 513.92pt x 513.92pt>
+File: Assignment2Files/pep30.jpg Graphic file (type jpg)
+
+<use Assignment2Files/pep30.jpg>
+Package pdftex.def Info: Assignment2Files/pep30.jpg used on input line 180.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+
+<Assignment2Files/bab30.jpg, id=146, 513.92pt x 513.92pt>
+File: Assignment2Files/bab30.jpg Graphic file (type jpg)
+
+<use Assignment2Files/bab30.jpg>
+Package pdftex.def Info: Assignment2Files/bab30.jpg used on input line 182.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+
+<Assignment2Files/pep10.jpg, id=147, 513.92pt x 513.92pt>
+File: Assignment2Files/pep10.jpg Graphic file (type jpg)
+
+<use Assignment2Files/pep10.jpg>
+Package pdftex.def Info: Assignment2Files/pep10.jpg used on input line 185.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+
+<Assignment2Files/bab10.jpg, id=148, 513.92pt x 513.92pt>
+File: Assignment2Files/bab10.jpg Graphic file (type jpg)
+
+<use Assignment2Files/bab10.jpg>
+Package pdftex.def Info: Assignment2Files/bab10.jpg used on input line 187.
+(pdftex.def)             Requested size: 187.89914pt x 187.89682pt.
+ [4 <./Assignment2Files/pep90.jpg> <./Assignment2Files/bab90.jpg> <./Assignment
+2Files/pep70.jpg> <./Assignment2Files/bab70.jpg> <./Assignment2Files/pep50.jpg>
+ <./Assignment2Files/bab50.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+Package epstopdf Info: Source file: <Assignment2Files/lab2_01.eps>
+(epstopdf)                    date: 2018-01-31 10:01:35
 (epstopdf)                    size: 82834 bytes
-(epstopdf)             Output file: <lab2_01-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-01-30 18:44:37
+(epstopdf)             Output file: <Assignment2Files/lab2_01-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-01-31 10:01:35
 (epstopdf)                    size: 8816 bytes
-(epstopdf)             Command: <repstopdf --outfile=lab2_01-eps-converted-to.p
-df lab2_01.eps>
-(epstopdf)             \includegraphics on input line 138.
+(epstopdf)             Command: <repstopdf --outfile=Assignment2Files/lab2_01-e
+ps-converted-to.pdf Assignment2Files/lab2_01.eps>
+(epstopdf)             \includegraphics on input line 217.
 Package epstopdf Info: Output file is already uptodate.
 
-<lab2_01-eps-converted-to.pdf, id=98, 462.72874pt x 373.395pt>
-File: lab2_01-eps-converted-to.pdf Graphic file (type pdf)
-
-<use lab2_01-eps-converted-to.pdf>
-Package pdftex.def Info: lab2_01-eps-converted-to.pdf used on input line 138.
+<Assignment2Files/lab2_01-eps-converted-to.pdf, id=155, 462.72874pt x 373.395pt
+>
+File: Assignment2Files/lab2_01-eps-converted-to.pdf Graphic file (type pdf)
+ <use Assignment2Files/lab2_01-eps-converted-to.pdf>
+Package pdftex.def Info: Assignment2Files/lab2_01-eps-converted-to.pdf used on 
+input line 217.
 (pdftex.def)             Requested size: 289.07999pt x 233.27444pt.
-Package epstopdf Info: Source file: <lab2_02.eps>
-(epstopdf)                    date: 2018-01-30 18:43:16
+ [5 <./Assignment2Files/pep30.jpg> <./Assignment2Files/bab30.jpg> <./Assignment
+2Files/pep10.jpg> <./Assignment2Files/bab10.jpg>]
+Package epstopdf Info: Source file: <Assignment2Files/lab2_02.eps>
+(epstopdf)                    date: 2018-01-31 10:01:35
 (epstopdf)                    size: 82581 bytes
-(epstopdf)             Output file: <lab2_02-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-01-30 18:44:38
+(epstopdf)             Output file: <Assignment2Files/lab2_02-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-01-31 10:01:35
 (epstopdf)                    size: 8973 bytes
-(epstopdf)             Command: <repstopdf --outfile=lab2_02-eps-converted-to.p
-df lab2_02.eps>
-(epstopdf)             \includegraphics on input line 140.
+(epstopdf)             Command: <repstopdf --outfile=Assignment2Files/lab2_02-e
+ps-converted-to.pdf Assignment2Files/lab2_02.eps>
+(epstopdf)             \includegraphics on input line 224.
 Package epstopdf Info: Output file is already uptodate.
 
-<lab2_02-eps-converted-to.pdf, id=99, 462.72874pt x 373.395pt>
-File: lab2_02-eps-converted-to.pdf Graphic file (type pdf)
-
-<use lab2_02-eps-converted-to.pdf>
-Package pdftex.def Info: lab2_02-eps-converted-to.pdf used on input line 140.
+<Assignment2Files/lab2_02-eps-converted-to.pdf, id=162, 462.72874pt x 373.395pt
+>
+File: Assignment2Files/lab2_02-eps-converted-to.pdf Graphic file (type pdf)
+ <use Assignment2Files/lab2_02-eps-converted-to.pdf>
+Package pdftex.def Info: Assignment2Files/lab2_02-eps-converted-to.pdf used on 
+input line 224.
 (pdftex.def)             Requested size: 289.07999pt x 233.27444pt.
- [3 <./lab2_01-eps-converted-to.pdf>]
-[4 <./lab2_02-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <lab2_03.eps>
-(epstopdf)                    date: 2018-01-30 18:44:10
+ [6 <./Assignment2Files/lab2_01-eps-converted-to.pdf> <./Assignment2Files/lab2_
+02-eps-converted-to.pdf>]
+[7] [8]
+Package epstopdf Info: Source file: <Assignment2Files/lab2_03.eps>
+(epstopdf)                    date: 2018-01-31 10:01:35
 (epstopdf)                    size: 2177051 bytes
-(epstopdf)             Output file: <lab2_03-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-01-30 18:44:38
+(epstopdf)             Output file: <Assignment2Files/lab2_03-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-01-31 10:01:35
 (epstopdf)                    size: 281494 bytes
-(epstopdf)             Command: <repstopdf --outfile=lab2_03-eps-converted-to.p
-df lab2_03.eps>
-(epstopdf)             \includegraphics on input line 248.
+(epstopdf)             Command: <repstopdf --outfile=Assignment2Files/lab2_03-e
+ps-converted-to.pdf Assignment2Files/lab2_03.eps>
+(epstopdf)             \includegraphics on input line 351.
 Package epstopdf Info: Output file is already uptodate.
 
-<lab2_03-eps-converted-to.pdf, id=196, 514.92375pt x 514.92375pt>
-File: lab2_03-eps-converted-to.pdf Graphic file (type pdf)
-
-<use lab2_03-eps-converted-to.pdf>
-Package pdftex.def Info: lab2_03-eps-converted-to.pdf used on input line 248.
+<Assignment2Files/lab2_03-eps-converted-to.pdf, id=278, 514.92375pt x 514.92375
+pt>
+File: Assignment2Files/lab2_03-eps-converted-to.pdf Graphic file (type pdf)
+ <use Assignment2Files/lab2_03-eps-converted-to.pdf>
+Package pdftex.def Info: Assignment2Files/lab2_03-eps-converted-to.pdf used on 
+input line 351.
 (pdftex.def)             Requested size: 289.07999pt x 289.08604pt.
- [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
- [6 <./lab2_03-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
-
-(./lab2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
+ [9 <./Assignment2Files/lab2_03-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
+ (./lab2.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
 Package rerunfilecheck Info: File `lab2.out' has not changed.
 (rerunfilecheck)             Checksum: DC1766E8881C80CE8D4232FD7594AB15;188.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 360.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 9503 strings out of 492995
- 137312 string characters out of 6132704
- 408442 words of memory out of 5000000
- 12770 multiletter control sequences out of 15000+600000
+ 9565 strings out of 492995
+ 138941 string characters out of 6132704
+ 393937 words of memory out of 5000000
+ 12813 multiletter control sequences out of 15000+600000
  13393 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,8n,42p,442b,7569s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,10n,42p,446b,7571s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on lab2.pdf (6 pages, 423775 bytes).
+/cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on lab2.pdf (9 pages, 838242 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 178 named destinations out of 1000 (max. 500000)
- 40 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 321 compressed objects within 4 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

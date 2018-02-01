@@ -1,9 +1,7 @@
 
-% This LaTeX was auto-generated from MATLAB code.
-% To make changes, update the MATLAB code and republish this document.
-
 \documentclass{article}
 \usepackage{graphicx}
+\graphicspath{ {Assignment2Files/} }
 \usepackage{color}
 
 \usepackage{amsmath}
@@ -43,6 +41,19 @@
 \newpage
 
 \section{JPEG Quality Factor}
+
+\qquad Peak Signal to Noise Ratio (PSNR) is a common method for measuring
+the quality of a image that has gone through compression. PSNR is a way to
+quanitize the quality of a decoded image as perceived by the human eye.
+\eqref{psnr:1} is how PSNR is calculated, where $\sigma_e^2$ is the variance
+of noise/error and A is the bit depth of the image. The value calculated can
+be interpretted as unnoticable noise if it is greater than 40dB, as low
+quality if it is less than 30dB, and as good quality otherwise. 
+
+\begin{align}
+	PSNR=10log_{10}(\frac{A^2}{\sigma_e^2})\label{psnr:1}
+\end{align} 
+
 
 \begin{lstlisting}[language=Matlab]
 pep=imread('peppers.tif');
@@ -135,12 +146,94 @@ hold on
 title('baboon - psnr vs quality')
 \end{lstlisting}
 
+\newpage
+In the following table the peppers.tif and baboon.tif were compressed with
+image quality factors of 90, 70, 50, 30, \& 10. 
+
+\begin{center}
+\hspace*{-2.5cm}
+\begin{tabular}{@{}c|c|c}
+\textbf{Quality Factor} & \textbf{Peppers} & \textbf{Baboon} \\  
+\hline
+\textbf{90} & 
+\includegraphics[width=0.4\textwidth]{pep90}
+&
+\includegraphics[width=0.4\textwidth]{bab90}
+\\ \hline
+\textbf{70} & 
+\includegraphics[width=0.4\textwidth]{pep70}
+&
+\includegraphics[width=0.4\textwidth]{bab70}
+\\ \hline
+\textbf{50} & 
+\includegraphics[width=0.4\textwidth]{pep50}
+&
+\includegraphics[width=0.4\textwidth]{bab50}
+\\ \hline
+\end{tabular}
+\hspace*{-2.5cm}
+\end{center}
+\begin{center}
+\hspace*{-2.5cm}
+\begin{tabular}{@{}ccc}
+\textbf{30} & 
+\includegraphics[width=0.4\textwidth]{pep30}
+&
+\includegraphics[width=0.4\textwidth]{bab30}
+\\ \hline
+\textbf{10} & 
+\includegraphics[width=0.4\textwidth]{pep10}
+&
+\includegraphics[width=0.4\textwidth]{bab10}
+\\
+\end{tabular}
+\hspace*{-2.5cm}
+\end{center}
+
+\hfill \break 
+
+As seen in figures \ref{pepperGraph}, and \ref{baboonGraph} as the image
+file size gets smaller the PSNR of the image drops lower. Also, as seen in
+the images as the quality gets lower the image becomes more blocky and noise
+in added in the high freqency sections. Which is normally fine because the
+human eye is less perceptive to changes in high frequency regions, but edge
+also count as high frequency and noise can be perceived on edged of smooth
+regions. 
+The blockiness occurs because jpeg divides the image into $8 \ x \ 8$ block
+and then runs the algorithm on each block, therefore, some block may throw away or
+keep more information than the one next to it. Also the jpeg algorithm takes
+into account the humans do not perceive change in high frequency regions as
+well, so it will discrad this information. 
+
+There is a clear drop in image quality around a quality factor of 30 or 10.
+The image becomes far more blocky because of the loss in information. The
+PSNR graphs also reflect this, because the peppers at quality 10 have a PSNR
+of about 30, and the baboon at quality of 30 drops below 30dB. Since less
+than 30dB is the qualification for low quality it make sense that these
+images have visually perceived error.
+
+\begin{figure}[H]
+\centering
 \includegraphics [width=4in]{lab2_01.eps}
+\caption{Peppers file size and PSNR as the quality changes}
+\label{pepperGraph}
+\end{figure}
 
+\begin{figure}[H]
+\centering
 \includegraphics [width=4in]{lab2_02.eps}
+\caption{Baboon file size and PSNR as the quality changes}
+\label{baboonGraph}
+\end{figure}
 
-
+\newpage
 \section{Writing JPEG compression in matlab}
+
+\qquad The following sections are the code the implements the jpeg encoding
+algorithm by segmenting the image into $8 \ x \ 8$ pixel blocks, computing
+the discrete cosine tranform, and quanitizing each block. Then using the
+provided functions to further format and entropy encode the jpeg. That
+process is then reversed for decoding the image. 
 
 \subsection*{myJpgEncode.m}
 \begin{lstlisting}[language=Matlab]
@@ -178,7 +271,14 @@ end
 end
 \end{lstlisting}
 
+
+\newpage
 \section{Evaluating Quantization Tables}
+\qquad Our jpeg encoding and decoding algorithms are then tested by using
+the standard jpeg luminance quantization table. Then a custom quantization
+table is created based off of the values from the DCT of the peppers.tif
+image. This custom table should better compress the image, without loosing
+too much information as to distort the image.  
 
 \begin{lstlisting}[language=Matlab]
 Q=[16 11 10 16 24 40 51 61;...
@@ -227,6 +327,10 @@ figure
 imshow([pep,jpg1;jpg2,jpg3])
 \end{lstlisting}
 
+** NOTE: Put some words about the actual Quantization tables used and the
+results of each one, in terms of PSNR and visual perception. **
+
+
 \begin{table}[H]
 \centering
 \begin{tabular}{ |c|c|c| } 
@@ -241,7 +345,6 @@ imshow([pep,jpg1;jpg2,jpg3])
 \caption{Comparison of Different JPEG Quantization Tables Used}
 \label{snrTab}
 \end{table}
-
    
 \begin{figure}[H]
 \centering
