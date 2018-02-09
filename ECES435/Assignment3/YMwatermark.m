@@ -2,7 +2,7 @@ function [marked] = YMwatermark( img,wmk,key )
 %UNTITLED6 Summary of this function goes here
 %   Detailed explanation goes here
     rng(key); 
-    LUTvals= repmat([0 1]',128,1); %rand(1,256) > .5;
+    LUTvals= rand(1,256) > .5;
     [r,c]=size(img); 
     marked=zeros(size(img)); 
     incr=[1, -1, 2, -2, 3, -3, 4, -4, 5, -5, 6, -1, 7, -7, 8, -8, 9, -9, 10, ...
