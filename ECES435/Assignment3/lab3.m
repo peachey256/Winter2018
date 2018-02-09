@@ -36,11 +36,11 @@ subplot(2,3,3); imshow(wmk3); title('Original')
 subplot(2,3,6); imshow(getBP(wmk3,1)); title('Bit Plane 1')
 
 barb=imread('Assingment 3 Files/Barbara.bmp');
-figure
-for j=1:8
-    imshow(BPstitch(pep,barb,j))
-    pause
-end
+% figure
+% for j=1:8
+%     imshow(BPstitch(pep,barb,j))
+%     pause
+% end
 
 type('getBP.m'); 
 type('BPstitch.m');
@@ -60,12 +60,12 @@ img2=bab;
 figure 
 imshow(getBP(marked1,1))
 hold on 
-title("Yeung-Mintzer pepper - Bit plane 1")
+title('Yeung-Mintzer pepper - Bit plane 1')
 
 figure 
 imshow(getBP(marked2,1))
 hold on 
-title("Yeung-Mintzer baboon - Bit plane 1")
+title('Yeung-Mintzer baboon - Bit plane 1')
 
 % get the PSNR
 ym_psr_pep=psnr(pep, marked1)
