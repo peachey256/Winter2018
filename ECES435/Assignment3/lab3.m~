@@ -74,6 +74,3 @@ ym_psr_bab=psnr(bab, marked2)
 % LSB psnr 
 lsb_in_pep=BPstitch(pep,barb,1); 
 lsb_psnr_pep=psnr(pep, lsb_in_pep)
-
-lsb_in_bab=BPstitch(bab,barb,1); 
-lsb_psnr_bab=psnr(bab, lsb_in_bab)
