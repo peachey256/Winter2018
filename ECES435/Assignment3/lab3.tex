@@ -127,8 +127,8 @@ function [bp] = getBP(img,ind)
 end
 \end{lstlisting}
 
-This is the function used to replace the N layers of the host image with the
-payload image. 
+This is the function was used to replace the N least significant bits
+of the host image with those of the payload image.
 
 \begin{lstlisting}[language=Matlab]
 function [encoded] = BPstitch(img,msg,N)
@@ -146,13 +146,14 @@ function [encoded] = BPstitch(img,msg,N)
 
     encoded=uint8(encoded);
 end
-
 \end{lstlisting}
-    
 
 
 
-\section{Part 2}
+\section{Yeung-Mintzer Watermarking}
+In this section, Yeung-Mintzer watermarking was implemented and tested
+on several different images. The strengths and weaknesses compared to
+LSB embedding were compared.
 
 \begin{lstlisting}[language=Matlab]
 key=256;
@@ -225,6 +226,23 @@ lsb_psnr_bab =
    51.1391
 
 \end{verbatim} \color{black}
+
+YM watermarking resulted in a lower signal to noise ratio than the
+LSB embedding. LSB embedding is guarenteed to change, at most, just
+the least signifigant bit. YM watermarking however will result in
+an indeterminate number of bit changes due to the random nature of
+the lookup table. The signal to noise ratio of the lsb embedding was
+consistently 3db higher than the YM embedding.
+To verify the functionality of the yueng-Mintzer decoder, an image was
+decoded using the key 435, to reveal a tiled version of the Drexel
+logo as the watermark.
+
+Next, LSB and YM watermarking were compared in terms of their fragility.
+After detecting the watermark in the image with LSB watermarking, it is
+easy to modify the image and replace the least significant bits with the
+original watermark after. The YM watermark is harder to detect, and
+unless the key to the lookup table is used, it is not possible to
+recreate the watermark after editing the image.
     
 \includegraphics [width=4in]{lab3_05.eps}
 

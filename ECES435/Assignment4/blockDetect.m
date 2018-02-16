@@ -31,11 +31,11 @@ function [ k ] = blockDetect( im )
     n=0.25; 
     % 4) 
     jpegDetect = (k>n); 
-    fprintf("The strength of the blocking fingerprint is %d.\n",k); 
+    fprintf('The strength of the blocking fingerprint is %d.\n',k); 
     if jpegDetect==1
-        fprintf("So the image was JPEG compressed \n")
+        fprintf('So the image was JPEG compressed \n')
     else
-        fprintf("So the image was not JPEG compressed \n")
+        fprintf('So the image was not JPEG compressed \n')
     end
 
 end
