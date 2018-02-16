@@ -36,8 +36,6 @@ subplot(2,3,3); imshow(wmk3); title('Original')
 subplot(2,3,6); imshow(getBP(wmk3,1)); title('Bit Plane 1')
 
 barb=imread('Assingment 3 Files/Barbara.bmp');
-figure
-imshow(BPstitch(pep,barb,5))
 % figure
 % for j=1:8
 %     imshow(BPstitch(pep,barb,j))
@@ -84,17 +82,10 @@ scrt=imread('Assingment 3 Files/YMwmkedKey435.tiff');
 figure
 imshow(YMcheck(scrt,435))
 
-
-manbearpig1=mod(lsb_in_bab,16)+mod(pep,16)*16;
-manbearpig2=mod(marked2,16)+mod(pep,16)*16;
 figure
-subplot(2,2,1)
-imshow(manbearpig1)
-subplot(2,2,2)
-imshow(manbearpig2)
-subplot(2,2,3)
-imshow(getBP(manbearpig1,1))
-subplot(2,2,4)
-imshow(YMcheck(manbearpig2,256))
+
+
+
+
 
 

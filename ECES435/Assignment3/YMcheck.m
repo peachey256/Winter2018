@@ -3,7 +3,7 @@ function [wmk] = YMcheck(img,key)
 %   Detailed explanation goes here
     rng(key); 
     LUTvals= rand(1,256) > .5;
-    wmk=LUTvals(img);
+    wmk=LUTvals(img+1);
 
 end
 
