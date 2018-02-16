@@ -1,10 +1,30 @@
 
-% This LaTeX was auto-generated from MATLAB code.
-% To make changes, update the MATLAB code and republish this document.
-
 \documentclass{article}
 \usepackage{graphicx}
+\graphicspath{ {Assignment2Files/} }
 \usepackage{color}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{algorithm2e}
+\usepackage{float}
+
+\usepackage{hyperref}
+\hypersetup{linktoc=all}
+
+\usepackage{listings}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+\lstset{numbers=right, 
+                numberstyle=\tiny, 
+                breaklines=true,
+                backgroundcolor=\color{light-gray},
+                numbersep=5pt,
+                xleftmargin=.5in,
+                xrightmargin=.5in} 
 
 \sloppy
 \definecolor{lightgray}{gray}{0.5}
@@ -12,25 +32,15 @@
 
 \begin{document}
 
-    
-    
-\subsection*{Contents}
+\title{Lab 3: Simple Steganography}
+\author{Brian Hosler \& Sarah Peachey }
+\maketitle 
 
-\begin{itemize}
-\setlength{\itemsep}{-1ex}
-   \item Part 1
-   \item Part 2
-\end{itemize}
-\begin{verbatim}
-clear;
-close all;
-clc;
-\end{verbatim}
+\section{Part 1}
 
 
-\subsection*{Part 1}
 
-\begin{verbatim}
+\begin{lstlisting}[language=Matlab]
 pep=imread('Assingment 3 Files/peppers.tif');
 bab=imread('Assingment 3 Files/baboon.tif');
 figure
@@ -64,25 +74,23 @@ subplot(2,3,6); imshow(getBP(wmk3,1)); title('Bit Plane 1')
 barb=imread('Assingment 3 Files/Barbara.bmp');
 figure
 imshow(BPstitch(pep,barb,5))
-% figure
-% for j=1:8
-%     imshow(BPstitch(pep,barb,j))
-%     pause
-% end
 
 type('getBP.m');
 type('BPstitch.m');
-\end{verbatim}
 
-        \color{lightgray} \begin{verbatim}
+\end{lstlisting}
+
+\begin{lstlisting}[language=Matlab]
 function [bp] = getBP(img,ind)
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
     bp=255*bitget(img,ind);
 
 end
+\end{lstlisting}
 
 
+\begin{lstlisting}[language=Matlab]
 function [encoded] = BPstitch(img,msg,N)
 %UNTITLED5 Summary of this function goes here
 %   Detailed explanation goes here
@@ -101,7 +109,7 @@ function [encoded] = BPstitch(img,msg,N)
     encoded=uint8(encoded);
 end
 
-\end{verbatim} \color{black}
+\end{lstlisting}
     
 \includegraphics [width=4in]{lab3_01.eps}
 
@@ -112,9 +120,9 @@ end
 \includegraphics [width=4in]{lab3_04.eps}
 
 
-\subsection*{Part 2}
+\section{Part 2}
 
-\begin{verbatim}
+\begin{lstlisting}[language=Matlab]
 key=256;
 wmk=getBP(barb,8)>128;
 
@@ -162,7 +170,7 @@ subplot(2,2,3)
 imshow(getBP(manbearpig1,1))
 subplot(2,2,4)
 imshow(YMcheck(manbearpig2,256))
-\end{verbatim}
+\end{lstlisting}
 
         \color{lightgray} \begin{verbatim}
 ym_psr_pep =
