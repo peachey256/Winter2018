@@ -277,7 +277,7 @@ end
 \qquad Our jpeg encoding and decoding algorithms are then tested by using
 the standard jpeg luminance quantization table. Then a custom quantization
 table is created based off of the values from the DCT of the peppers.tif
-image. This custom table should better compress the image, without loosing
+image. This custom table should better compress the image, without losing
 too much information as to distort the image.  
 
 \begin{lstlisting}[language=Matlab]
@@ -327,8 +327,22 @@ figure
 imshow([pep,jpg1;jpg2,jpg3])
 \end{lstlisting}
 
-** NOTE: Put some words about the actual Quantization tables used and the
-results of each one, in terms of PSNR and visual perception. **
+The first quantization table used was the standard JPEG table, which resulted
+in a file size of 44kB, and a signal to noise ratio around 36. In order to
+improve upon this, a table should be constructed and tailored to the image it's
+representing. With this in mind, a quantization table was derived by taking the
+average magnitude of each DCT coefficient over the whole image. These average
+magnitudes were inverted, so that a high mean would become a small quantization
+value, and a small magnitude would result in a large quantization step size.
+This table was scaled to between 1 and 300, so that step sizes were more realistic.
+Finally, a third table was constructed using the varience of the DCT coefficients.
+Similar normalization was applied. The compressed file sizes and psnr's are reported
+in Table \ref{snrTab}.
+
+The varience based table compressed the image the most, will little loss in the psnr.
+Comparing the compressed image with original side-by-side, makes the loss in quality
+apparent. The Mean-based table did not compress the image as well as the variance-based
+table, but resulted in a higher psnr than the standard JPEG table.
 
 
 \begin{table}[H]

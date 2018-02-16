@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 FEB 2018 12:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 FEB 2018 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab2.tex
+**lab2
 (./lab2.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
@@ -557,11 +557,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--194
  []
 
 Package epstopdf Info: Source file: <Assignment2Files/lab2_01.eps>
-(epstopdf)                    date: 2018-01-31 10:01:35
+(epstopdf)                    date: 2018-02-01 12:28:37
 (epstopdf)                    size: 82834 bytes
 (epstopdf)             Output file: <Assignment2Files/lab2_01-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2018-01-31 10:01:35
+(epstopdf)                    date: 2018-02-01 12:28:37
 (epstopdf)                    size: 8816 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment2Files/lab2_01-e
 ps-converted-to.pdf Assignment2Files/lab2_01.eps>
@@ -578,11 +578,11 @@ input line 217.
  [5 <./Assignment2Files/pep30.jpg> <./Assignment2Files/bab30.jpg> <./Assignment
 2Files/pep10.jpg> <./Assignment2Files/bab10.jpg>]
 Package epstopdf Info: Source file: <Assignment2Files/lab2_02.eps>
-(epstopdf)                    date: 2018-01-31 10:01:35
+(epstopdf)                    date: 2018-02-01 12:28:37
 (epstopdf)                    size: 82581 bytes
 (epstopdf)             Output file: <Assignment2Files/lab2_02-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2018-01-31 10:01:35
+(epstopdf)                    date: 2018-02-01 12:28:37
 (epstopdf)                    size: 8973 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment2Files/lab2_02-e
 ps-converted-to.pdf Assignment2Files/lab2_02.eps>
@@ -600,33 +600,33 @@ input line 224.
 02-eps-converted-to.pdf>]
 [7] [8]
 Package epstopdf Info: Source file: <Assignment2Files/lab2_03.eps>
-(epstopdf)                    date: 2018-01-31 10:01:35
+(epstopdf)                    date: 2018-02-01 12:28:37
 (epstopdf)                    size: 2177051 bytes
 (epstopdf)             Output file: <Assignment2Files/lab2_03-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2018-01-31 10:01:35
+(epstopdf)                    date: 2018-02-01 12:28:37
 (epstopdf)                    size: 281494 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignment2Files/lab2_03-e
 ps-converted-to.pdf Assignment2Files/lab2_03.eps>
-(epstopdf)             \includegraphics on input line 351.
+(epstopdf)             \includegraphics on input line 365.
 Package epstopdf Info: Output file is already uptodate.
 
-<Assignment2Files/lab2_03-eps-converted-to.pdf, id=278, 514.92375pt x 514.92375
+<Assignment2Files/lab2_03-eps-converted-to.pdf, id=279, 514.92375pt x 514.92375
 pt>
 File: Assignment2Files/lab2_03-eps-converted-to.pdf Graphic file (type pdf)
  <use Assignment2Files/lab2_03-eps-converted-to.pdf>
 Package pdftex.def Info: Assignment2Files/lab2_03-eps-converted-to.pdf used on 
-input line 351.
+input line 365.
 (pdftex.def)             Requested size: 289.07999pt x 289.08604pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
  [9 <./Assignment2Files/lab2_03-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
  (./lab2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 374.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 374.
 Package rerunfilecheck Info: File `lab2.out' has not changed.
 (rerunfilecheck)             Checksum: DC1766E8881C80CE8D4232FD7594AB15;188.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 360.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
  )
 (\end occurred inside a group at level 1)
 
@@ -639,7 +639,7 @@ Here is how much of TeX's memory you used:
  12813 multiletter control sequences out of 15000+600000
  13393 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,10n,42p,446b,7571s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,10n,42p,442b,7571s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
@@ -652,10 +652,10 @@ fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on lab2.pdf (9 pages, 838242 bytes).
+Output written on lab2.pdf (9 pages, 839464 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 321 compressed objects within 4 object streams
+ 369 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
  184 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
