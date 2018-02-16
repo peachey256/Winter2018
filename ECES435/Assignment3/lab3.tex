@@ -36,9 +36,22 @@
 \author{Brian Hosler \& Sarah Peachey }
 \maketitle 
 
-\section{Part 1}
+\abstract{Being able to hide information into images can be useful for
+several reasons. If you want to determine if an image has been edited or
+compressed, Least Significant Bit Hiding can be a technique for implementing
+soft watermarking. But if someone could easily remove the LSB plain edit the
+image and then put the LSB plain back in. So more advanced algorithms like
+Yeung-Mintzer Watermarking are used where a user must know the random seed
+to be able to extract the watermark. Therefore, it is more secure.}
+\tableofcontents
+\newpage
 
 
+\section{Part 1:Least Significant Bit Data Hiding}
+
+Least significant bit hiding is when you take the MSB of the payload and
+place it into the LSB host image. The below code executes a function that
+examines one bit plane of an image, for every image. 
 
 \begin{lstlisting}[language=Matlab]
 pep=imread('Assingment 3 Files/peppers.tif');
@@ -58,7 +71,29 @@ for i=1:8
     subplot(3,3,10-i)
     imshow(getBP(bab,i))
 end
+\end{lstlisting}
 
+The eight bit planes of the peppers.tif image and the baboon.tif image, are
+shown below. As seen the MSB plane contains what appears to be a binary
+version of the image, whereas the LSB plane contains what looks like noise.
+All the bit planes in between transition from a recognizable image to noise.
+The peppers.tif image becomes too noisy to recognize on bit plane 4,
+whereas the baboon.tif has more high frequency content and becomes too
+noisy on bit plane 5. The bit planes of the babbon.tif image is more noisy
+because of the high frequncy content means the bits change more often. 
+\includegraphics [width=4in]{lab3_01.eps}
+\includegraphics [width=4in]{lab3_02.eps}
+
+The following code examines the different bit planes of several images to
+see if there is any hidden content. As seen in the images, bit plane 2 was a
+watermark in the first image, and bit plane 1 was a watermark in the last
+two images. Then a function was written to replace the N least significant
+bit planes from the one image with the N most significant bit planes from
+another image. The top N layers of of Barabara.bmp are hidden in the
+peppers.tif and baboon.tif images. The peppers image becomes distorted when
+N=5, Barbara can be seen, and the peppers look choppy. 
+
+\begin{lstlisting}
 wmk1=imread('Assingment 3 Files/LSBwmk1.tiff');%2
 wmk2=imread('Assingment 3 Files/LSBwmk2.tiff');%1
 wmk3=imread('Assingment 3 Files/LSBwmk3.tiff');%1
@@ -80,20 +115,23 @@ type('BPstitch.m');
 
 \end{lstlisting}
 
+\includegraphics [width=4in]{lab3_03.eps}
+\includegraphics [width=4in]{lab3_04.eps}
+
+This is the function used to get a bit plane from an image. 
+
 \begin{lstlisting}[language=Matlab]
 function [bp] = getBP(img,ind)
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
     bp=255*bitget(img,ind);
 
 end
 \end{lstlisting}
 
+This is the function used to replace the N layers of the host image with the
+payload image. 
 
 \begin{lstlisting}[language=Matlab]
 function [encoded] = BPstitch(img,msg,N)
-%UNTITLED5 Summary of this function goes here
-%   Detailed explanation goes here
     encoded=uint8(zeros(size(img)));
     for i=(N+1):8
         encoded=encoded+(2^(i-1))*bitget(img,i);
@@ -111,13 +149,7 @@ end
 
 \end{lstlisting}
     
-\includegraphics [width=4in]{lab3_01.eps}
 
-\includegraphics [width=4in]{lab3_02.eps}
-
-\includegraphics [width=4in]{lab3_03.eps}
-
-\includegraphics [width=4in]{lab3_04.eps}
 
 
 \section{Part 2}
