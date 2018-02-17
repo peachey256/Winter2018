@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 18:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 FEB 2018 14:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab3
+**lab3.tex
 (./lab3.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
@@ -472,177 +472,182 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package epstopdf Info: Source file: <lab3_01.eps>
-(epstopdf)                    date: 2018-02-16 11:32:28
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 2025671 bytes
 (epstopdf)             Output file: <lab3_01-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-02-16 11:45:27
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 454841 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab3_01-eps-converted-to.p
 df lab3_01.eps>
-(epstopdf)             \includegraphics on input line 84.
+(epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
 
 <lab3_01-eps-converted-to.pdf, id=28, 407.5225pt x 345.29pt>
 File: lab3_01-eps-converted-to.pdf Graphic file (type pdf)
 
 <use lab3_01-eps-converted-to.pdf>
-Package pdftex.def Info: lab3_01-eps-converted-to.pdf used on input line 84.
+Package pdftex.def Info: lab3_01-eps-converted-to.pdf used on input line 85.
 (pdftex.def)             Requested size: 289.07999pt x 244.94685pt.
 Package epstopdf Info: Source file: <lab3_02.eps>
-(epstopdf)                    date: 2018-02-16 11:32:29
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 2650678 bytes
 (epstopdf)             Output file: <lab3_02-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-02-16 11:45:28
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 599247 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab3_02-eps-converted-to.p
 df lab3_02.eps>
-(epstopdf)             \includegraphics on input line 85.
+(epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 
 <lab3_02-eps-converted-to.pdf, id=29, 407.5225pt x 345.29pt>
 File: lab3_02-eps-converted-to.pdf Graphic file (type pdf)
 
 <use lab3_02-eps-converted-to.pdf>
-Package pdftex.def Info: lab3_02-eps-converted-to.pdf used on input line 85.
+Package pdftex.def Info: lab3_02-eps-converted-to.pdf used on input line 86.
 (pdftex.def)             Requested size: 289.07999pt x 244.94685pt.
- [2 <./lab3_01-eps-converted-to.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+[][]
+ []
+
+[2 <./lab3_01-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <lab3_03.eps>
-(epstopdf)                    date: 2018-02-16 11:32:30
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 1890225 bytes
 (epstopdf)             Output file: <lab3_03-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-02-16 11:45:29
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 350284 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab3_03-eps-converted-to.p
 df lab3_03.eps>
-(epstopdf)             \includegraphics on input line 118.
+(epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
 
 <lab3_03-eps-converted-to.pdf, id=65, 436.63126pt x 335.2525pt>
 File: lab3_03-eps-converted-to.pdf Graphic file (type pdf)
 
 <use lab3_03-eps-converted-to.pdf>
-Package pdftex.def Info: lab3_03-eps-converted-to.pdf used on input line 118.
+Package pdftex.def Info: lab3_03-eps-converted-to.pdf used on input line 119.
 (pdftex.def)             Requested size: 289.07999pt x 221.95793pt.
 Package epstopdf Info: Source file: <lab3_04.eps>
-(epstopdf)                    date: 2018-02-16 11:32:30
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 451638 bytes
 (epstopdf)             Output file: <lab3_04-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-02-16 11:45:29
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 97052 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab3_04-eps-converted-to.p
 df lab3_04.eps>
-(epstopdf)             \includegraphics on input line 119.
+(epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
 
 <lab3_04-eps-converted-to.pdf, id=66, 514.92375pt x 514.92375pt>
 File: lab3_04-eps-converted-to.pdf Graphic file (type pdf)
 
 <use lab3_04-eps-converted-to.pdf>
-Package pdftex.def Info: lab3_04-eps-converted-to.pdf used on input line 119.
+Package pdftex.def Info: lab3_04-eps-converted-to.pdf used on input line 120.
 (pdftex.def)             Requested size: 289.07999pt x 289.08604pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
 [][]
  []
 
 [3 <./lab3_02-eps-converted-to.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 125.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 126.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 125.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 126.
  [4 <./lab3_03-eps-converted-to.pdf> <./lab3_04-eps-converted-to.pdf>]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 160.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 161.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 160.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 161.
  [5]
 Package epstopdf Info: Source file: <lab3_05.eps>
-(epstopdf)                    date: 2018-02-16 11:32:33
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 276872 bytes
 (epstopdf)             Output file: <lab3_05-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-02-16 11:45:30
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 69839 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab3_05-eps-converted-to.p
 df lab3_05.eps>
-(epstopdf)             \includegraphics on input line 247.
+(epstopdf)             \includegraphics on input line 242.
 Package epstopdf Info: Output file is already uptodate.
 
 <lab3_05-eps-converted-to.pdf, id=189, 514.92375pt x 527.9725pt>
 File: lab3_05-eps-converted-to.pdf Graphic file (type pdf)
 
 <use lab3_05-eps-converted-to.pdf>
-Package pdftex.def Info: lab3_05-eps-converted-to.pdf used on input line 247.
+Package pdftex.def Info: lab3_05-eps-converted-to.pdf used on input line 242.
 (pdftex.def)             Requested size: 289.07999pt x 296.4118pt.
- [6]
 Package epstopdf Info: Source file: <lab3_06.eps>
-(epstopdf)                    date: 2018-02-16 11:32:33
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 320135 bytes
 (epstopdf)             Output file: <lab3_06-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-02-16 11:45:30
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 71871 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab3_06-eps-converted-to.p
 df lab3_06.eps>
-(epstopdf)             \includegraphics on input line 249.
+(epstopdf)             \includegraphics on input line 244.
 Package epstopdf Info: Output file is already uptodate.
 
-<lab3_06-eps-converted-to.pdf, id=201, 514.92375pt x 527.9725pt>
+<lab3_06-eps-converted-to.pdf, id=190, 514.92375pt x 527.9725pt>
 File: lab3_06-eps-converted-to.pdf Graphic file (type pdf)
 
 <use lab3_06-eps-converted-to.pdf>
-Package pdftex.def Info: lab3_06-eps-converted-to.pdf used on input line 249.
+Package pdftex.def Info: lab3_06-eps-converted-to.pdf used on input line 244.
 (pdftex.def)             Requested size: 289.07999pt x 296.4118pt.
+ [6 <./lab3_05-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <lab3_07.eps>
-(epstopdf)                    date: 2018-02-16 11:32:34
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 61335 bytes
 (epstopdf)             Output file: <lab3_07-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-02-16 11:45:31
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 20610 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab3_07-eps-converted-to.p
 df lab3_07.eps>
-(epstopdf)             \includegraphics on input line 251.
+(epstopdf)             \includegraphics on input line 246.
 Package epstopdf Info: Output file is already uptodate.
 
-<lab3_07-eps-converted-to.pdf, id=202, 514.92375pt x 514.92375pt>
+<lab3_07-eps-converted-to.pdf, id=208, 514.92375pt x 514.92375pt>
 File: lab3_07-eps-converted-to.pdf Graphic file (type pdf)
 
 <use lab3_07-eps-converted-to.pdf>
-Package pdftex.def Info: lab3_07-eps-converted-to.pdf used on input line 251.
+Package pdftex.def Info: lab3_07-eps-converted-to.pdf used on input line 246.
 (pdftex.def)             Requested size: 289.07999pt x 289.08604pt.
- [7 <./lab3_05-eps-converted-to.pdf> <./lab3_06-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <lab3_08.eps>
-(epstopdf)                    date: 2018-02-16 11:32:34
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 1718201 bytes
 (epstopdf)             Output file: <lab3_08-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-02-16 11:45:32
+(epstopdf)                    date: 2018-02-16 11:58:48
 (epstopdf)                    size: 819708 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab3_08-eps-converted-to.p
 df lab3_08.eps>
-(epstopdf)             \includegraphics on input line 253.
+(epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
 
-<lab3_08-eps-converted-to.pdf, id=220, 393.47pt x 345.29pt>
+<lab3_08-eps-converted-to.pdf, id=209, 393.47pt x 345.29pt>
 File: lab3_08-eps-converted-to.pdf Graphic file (type pdf)
 
 <use lab3_08-eps-converted-to.pdf>
-Package pdftex.def Info: lab3_08-eps-converted-to.pdf used on input line 253.
+Package pdftex.def Info: lab3_08-eps-converted-to.pdf used on input line 256.
 (pdftex.def)             Requested size: 289.07999pt x 253.68234pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
- [8 <./lab3_07-eps-converted-to.pdf> <./lab3_08-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 260.
+ [7 <./lab3_06-eps-converted-to.pdf> <./lab3_07-eps-converted-to.pdf>] [8 <./la
+b3_08-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 260.
  (./lab3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 260.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 260.
 Package rerunfilecheck Info: File `lab3.out' has not changed.
-(rerunfilecheck)             Checksum: BE58DCC81A647247634E06BD05555EA4;136.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
+(rerunfilecheck)             Checksum: 2C55200344597F04BBDDBB202D76542E;129.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
  )
 (\end occurred inside a group at level 1)
 
@@ -655,7 +660,7 @@ Here is how much of TeX's memory you used:
  12788 multiletter control sequences out of 15000+600000
  12199 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,6n,42p,298b,7002s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,6n,42p,302b,7002s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
@@ -667,7 +672,7 @@ b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on lab3.pdf (8 pages, 2603695 bytes).
+Output written on lab3.pdf (8 pages, 2603161 bytes).
 PDF statistics:
  298 PDF objects out of 1000 (max. 8388607)
  231 compressed objects within 3 object streams

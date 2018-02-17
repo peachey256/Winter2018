@@ -39,18 +39,18 @@
 \abstract{Being able to hide information into images can be useful for
 several reasons. If you want to determine if an image has been edited or
 compressed, Least Significant Bit Hiding can be a technique for implementing
-soft watermarking. But if someone could easily remove the LSB plain edit the
-image and then put the LSB plain back in. So more advanced algorithms like
+soft watermarking. But someone could easily remove the LSB plane, edit the
+image, and then put the LSB plane back in. So more advanced algorithms like
 Yeung-Mintzer Watermarking are used where a user must know the random seed
-to be able to extract the watermark. Therefore, it is more secure.}
+in order to extract the watermark. Therefore, it is more secure.}
 \tableofcontents
 \newpage
 
 
-\section{Part 1:Least Significant Bit Data Hiding}
+\section{Least Significant Bit Data Hiding}
 
 Least significant bit hiding is when you take the MSB of the payload and
-place it into the LSB host image. The below code executes a function that
+place it into the LSB of the host image. The below code executes a function that
 examines one bit plane of an image, for every image. 
 
 \begin{lstlisting}[language=Matlab]
@@ -79,8 +79,9 @@ version of the image, whereas the LSB plane contains what looks like noise.
 All the bit planes in between transition from a recognizable image to noise.
 The peppers.tif image becomes too noisy to recognize on bit plane 4,
 whereas the baboon.tif has more high frequency content and becomes too
-noisy on bit plane 5. The bit planes of the babbon.tif image is more noisy
-because of the high frequncy content means the bits change more often. 
+noisy on bit plane 5. The bit planes of the babbon.tif image are more noisy
+because the high frequncy content means the bits change more often. 
+
 \includegraphics [width=4in]{lab3_01.eps}
 \includegraphics [width=4in]{lab3_02.eps}
 
@@ -231,11 +232,18 @@ YM watermarking resulted in a lower signal to noise ratio than the
 LSB embedding. LSB embedding is guarenteed to change, at most, just
 the least signifigant bit. YM watermarking however will result in
 an indeterminate number of bit changes due to the random nature of
-the lookup table. The signal to noise ratio of the lsb embedding was
-consistently 3db higher than the YM embedding.
-To verify the functionality of the yueng-Mintzer decoder, an image was
+the lookup table. The signal to noise ratio of the LSB embedding was
+consistently 3 dB higher than the YM embedding.
+To verify the functionality of the Yueng-Mintzer decoder, an image was
 decoded using the key 435, to reveal a tiled version of the Drexel
 logo as the watermark.
+
+    
+\includegraphics [width=4in]{lab3_05.eps}
+
+\includegraphics [width=4in]{lab3_06.eps}
+
+\includegraphics [width=4in]{lab3_07.eps}
 
 Next, LSB and YM watermarking were compared in terms of their fragility.
 After detecting the watermark in the image with LSB watermarking, it is
@@ -243,12 +251,7 @@ easy to modify the image and replace the least significant bits with the
 original watermark after. The YM watermark is harder to detect, and
 unless the key to the lookup table is used, it is not possible to
 recreate the watermark after editing the image.
-    
-\includegraphics [width=4in]{lab3_05.eps}
 
-\includegraphics [width=4in]{lab3_06.eps}
-
-\includegraphics [width=4in]{lab3_07.eps}
 
 \includegraphics [width=4in]{lab3_08.eps}
 
