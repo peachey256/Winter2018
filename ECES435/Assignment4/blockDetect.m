@@ -22,9 +22,11 @@ function [ k ] = blockDetect( im )
     end 
     % 2)
     figure 
-    HI=histogram(Zp/sum(Zp),255); 
+    HI=histogram(Zp,255); 
+    HI.Normalization = 'probability'; 
     hold on 
-    HII=histogram(Zpp/sum(Zpp),255); 
+    HII=histogram(Zpp,255); 
+    HII.Normalization = 'probability'; 
     legend('Normalized center values','Normalized edge values')
     % 3)
     k=sum(abs(HI.Values-HII.Values)); 
