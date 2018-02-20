@@ -22,3 +22,5 @@ k1=blockDetect(im2)
 
 im3=imread('Assignment4Files/blockArtifacts3.tif');
 k1=blockDetect(im2)
+
+type('blockDetect.m')
