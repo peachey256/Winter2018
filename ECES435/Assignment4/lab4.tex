@@ -1,10 +1,30 @@
-
-% This LaTeX was auto-generated from MATLAB code.
-% To make changes, update the MATLAB code and republish this document.
-
 \documentclass{article}
 \usepackage{graphicx}
+\graphicspath{ {./} }
 \usepackage{color}
+
+\usepackage{amsmath}
+\usepackage{commath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{algorithm2e}
+\usepackage{float}
+
+\usepackage{hyperref}
+\hypersetup{linktoc=all}
+
+\usepackage{listings}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+\lstset{numbers=right, 
+                numberstyle=\tiny, 
+                breaklines=true,
+                backgroundcolor=\color{light-gray},
+                numbersep=5pt,
+                xleftmargin=.5in,
+                xrightmargin=.5in} 
 
 \sloppy
 \definecolor{lightgray}{gray}{0.5}
@@ -12,24 +32,11 @@
 
 \begin{document}
 
-    
-    
-\subsection*{Contents}
+\title{Lab 3: Simple Steganography}
+\author{Brian Hosler \& Sarah Peachey }
+\maketitle 
 
-\begin{itemize}
-\setlength{\itemsep}{-1ex}
-   \item Part 1
-   \item Part 2
-\end{itemize}
-\begin{verbatim}
-% Feb 16, 2018
-% Brian Hosler & Sarah Peachey
-% Assignment 4
-clear
-close all
-clc
-\end{verbatim}
-
+    
 
 \subsection*{Part 1}
 
@@ -39,6 +46,28 @@ extract the metadata tag associated with image   1) reading the quatization tabl
 
 
 \subsection*{Part 2}
+
+\qquad JPEG compression can be detected by identifying $8 \ \times \ 8$
+grids across the image. One way to quantify the blocking is to make the same
+calculation at the center of an $8 \ \times \ 8$ block and at the edge of an
+$8 \ \times \ 8$ block and compare the error. If there are no blocking
+artifacts then the error should be small, if there are blocking artifacts
+the values at the corners will greatly varry from the center of the block. 
+
+\includegraphics [width=4in]{block}
+
+Using the $[A, B, C, D, E, F, G, H]$, noted above the \eqref{eq1} and
+\eqref{eq2} are calculated
+for every $8 \ \times \ 8$ block in the image. 
+
+\begin{align}
+	Z'(i,j)=\abs{A-B-C+D}\label{eq1}\\
+	Z''(i,j)=\abs{E-F-G+H}\label{eq2}
+\end{align}
+
+The values are then put into a normalized histogram, if the center values,
+Z', histogram looks the same as the edge values Z\'', histogram; then
+the image was jpeg compressed. 
 
 \begin{verbatim}
 im1=imread('Assignment4Files/blockArtifacts1.tif');
@@ -121,6 +150,11 @@ end
 
 \end{verbatim} \color{black}
     
+As seen below the Z' and Z\'', histograms look very different. Also
+the error of the two histograms was taken, called the blocking fingerprint.
+The blocking fingerprint was then compared to a threshold of
+0.25 to see if jpeg compression was detected. 
+
 \includegraphics [width=4in]{lab4_01.eps}
 
 \includegraphics [width=4in]{lab4_02.eps}
