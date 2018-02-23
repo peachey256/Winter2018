@@ -19,6 +19,7 @@
 \usepackage{color}
 \definecolor{light-gray}{gray}{0.95}
 \lstset{numbers=right,
+                basicstyle=\tiny,
                 numberstyle=\tiny,
                 breaklines=true,
                 backgroundcolor=\color{light-gray},
@@ -37,15 +38,252 @@
 \maketitle
 
 
+\section{Part 1: JPEG Snoop}
 
-\subsection*{Part 1}
+\subsection{imageOrigin1.jpg}
+	\textbf{Make:} Canon\\
+	\textbf{Model:} Powershot A75\\
+These quantization tables match those of several Canon cameras,
+including the Powershot A75, so this image is likely original.
+\begin{lstlisting}
+		*** Marker: DQT (xFFDB) ***
+		  Define a Quantization Table.
+		  OFFSET: 0x00002002
+		  Table length = 132
+		  ----
+		  Precision=8 bits
+		  Destination ID=0 (Luminance)
+			DQT, Row #0:   1   1   1   2   3   6   8  10 
+			DQT, Row #1:   1   1   2   3   4   8   9   8 
+			DQT, Row #2:   2   2   2   3   6   8  10   8 
+			DQT, Row #3:   2   2   3   4   7  12  11   9 
+			DQT, Row #4:   3   3   8  11  10  16  15  11 
+			DQT, Row #5:   3   5   8  10  12  15  16  13 
+			DQT, Row #6:   7  10  11  12  15  17  17  14 
+			DQT, Row #7:  14  13  13  15  15  14  14  14 
+			Approx quality factor = 92.96 (scaling=14.08 variance=5.28)
+		  ----
+		  Precision=8 bits
+		  Destination ID=1 (Chrominance)
+			DQT, Row #0:   4   4   5   9  15  26  26  26 
+			DQT, Row #1:   4   4   5  10  19  26  26  26 
+			DQT, Row #2:   5   5   8   9  26  26  26  26 
+			DQT, Row #3:   9  10   9  13  26  26  26  26 
+			DQT, Row #4:  15  19  26  26  26  26  26  26 
+			DQT, Row #5:  26  26  26  26  26  26  26  26 
+			DQT, Row #6:  26  26  26  26  26  26  26  26 
+			DQT, Row #7:  26  26  26  26  26  26  26  26 
+			Approx quality factor = 88.24 (scaling=23.52 variance=21.42)
+\end{lstlisting}
 
-\begin{par}
-extract the metadata tag associated with image   1) reading the quatization tables used to encode and decode in the   jpeg header   2) compare to list of digital camera models Need wine to use JPEGsnoop.exe :(
-\end{par} \vspace{1em}
+
+\subsection{imageOrigin2.jpg}
+	\textbf{Make:} Minolta Co., Ltd.\\
+	\textbf{Model:} DiMAGE S304\\
+These quantization tables match those of several Minolta cameras,
+including the DiMAGE S304, so this image is likely original.
+JPEG Snoop notes that the software field is set, but this
+frequently contains the software version.
+\begin{lstlisting}
+		*** Marker: DQT (xFFDB) ***
+		  Define a Quantization Table.
+		  OFFSET: 0x000047B5
+		  Table length = 132
+		  ----
+		  Precision=8 bits
+		  Destination ID=0 (Luminance)
+			DQT, Row #0:   1   1   4   5   6   5   2   5 
+			DQT, Row #1:   1   2   6   5   1   2   8   5 
+			DQT, Row #2:   1   1   2   1   1   8   3   6 
+			DQT, Row #3:   1   1   1   1   6   2   8  12 
+			DQT, Row #4:   1   2   5   1   7  10  10  12 
+			DQT, Row #5:   4   6   2  10  11   8  10  11 
+			DQT, Row #6:   5   3  10   9   7   7   9  10 
+			DQT, Row #7:   5   6   4   6   9   9  10   9 
+			Approx quality factor = 94.65 (scaling=10.71 variance=62.00)
+		  ----
+		  Precision=8 bits
+		  Destination ID=1 (Chrominance)
+			DQT, Row #0:   1   1   9   9   9   9   9   9 
+			DQT, Row #1:   2   9   9   9   2   9   9   9 
+			DQT, Row #2:   4   1   9   2   6   9   9   9 
+			DQT, Row #3:   2   6   5   4   9   9   9   9 
+			DQT, Row #4:   2   9   9   9   9   9   9   9 
+			DQT, Row #5:   9   9   9   9   9   9   9   9 
+			DQT, Row #6:   9   9   9   9   9   9   9   9 
+			DQT, Row #7:   9   9   9   9   9   9   9   9 
+			Approx quality factor = 94.92 (scaling=10.16 variance=47.37)
+\end{lstlisting}
 
 
-\subsection*{Part 2: Block Detection}
+\subsection{imageOrigin3.jpg}
+	\textbf{Make:} Canon\\
+	\textbf{Model:} Powershot SD400\\
+These quantization tables match those of several Canon cameras,
+including the Powershot SD400, so this image is likely original.
+\begin{lstlisting}
+		*** Marker: DQT (xFFDB) ***
+		  Define a Quantization Table.
+		  OFFSET: 0x00001E0D
+		  Table length = 132
+		  ----
+		  Precision=8 bits
+		  Destination ID=0 (Luminance)
+			DQT, Row #0:   1   1   2   2   3   3   7  14 
+			DQT, Row #1:   1   1   2   2   3   5  10  13 
+			DQT, Row #2:   1   2   2   3   8   8  11  13 
+			DQT, Row #3:   2   3   3   4  11  10  12  15 
+			DQT, Row #4:   3   4   6   7  10  12  15  15 
+			DQT, Row #5:   6   8   8  12  16  15  17  14 
+			DQT, Row #6:   8   9  10  11  15  16  17  14 
+			DQT, Row #7:  10   8   8   9  11  13  14  14 
+			Approx quality factor = 92.73 (scaling=14.53 variance=19.39)
+		  ----
+		  Precision=8 bits
+		  Destination ID=1 (Chrominance)
+			DQT, Row #0:   4   4   5   9  15  26  26  26 
+			DQT, Row #1:   4   4   5  10  19  26  26  26 
+			DQT, Row #2:   5   5   8   9  26  26  26  26 
+			DQT, Row #3:   9  10   9  13  26  26  26  26 
+			DQT, Row #4:  15  19  26  26  26  26  26  26 
+			DQT, Row #5:  26  26  26  26  26  26  26  26 
+			DQT, Row #6:  26  26  26  26  26  26  26  26 
+			DQT, Row #7:  26  26  26  26  26  26  26  26 
+			Approx quality factor = 88.24 (scaling=23.52 variance=21.42)
+\end{lstlisting}
+
+
+\subsection{imageOrigin4.jpg}
+	\textbf{Make:} Minolta Co., Ltd.\\
+	\textbf{Model:} DiMAGE S304\\
+JPEG Snoop is not sure if the image is original or processed.
+The EXIF data stated that the camera is original, but the
+quantization tables do not match any known tables for this camera.
+\begin{lstlisting}
+		*** Marker: DQT (xFFDB) ***
+		  Define a Quantization Table.
+		  OFFSET: 0x000047B5
+		  Table length = 132
+		  ----
+		  Precision=8 bits
+		  Destination ID=0 (Luminance)
+			DQT, Row #0:   4   3  11  14  17  15   8  14 
+			DQT, Row #1:   2   6  17  16   4   6  24  15 
+			DQT, Row #2:   4   3   7   3   4  22  10  18 
+			DQT, Row #3:   3   5   4   4  17   6  23  34 
+			DQT, Row #4:   4   6  16   5  22  29  29  34 
+			DQT, Row #5:  11  19   6  29  32  24  28  32 
+			DQT, Row #6:  16  10  31  26  22  20  28  28 
+			DQT, Row #7:  16  19  14  18  26  27  29  28 
+			Approx quality factor = 83.81 (scaling=32.39 variance=477.61)
+		  ----
+		  Precision=8 bits
+		  Destination ID=1 (Chrominance)
+			DQT, Row #0:   4   5  28  28  28  28  28  28 
+			DQT, Row #1:   6  28  28  28   6  28  28  28 
+			DQT, Row #2:  13   5  28   7  18  28  28  28 
+			DQT, Row #3:   6  18  16  13  28  28  28  28 
+			DQT, Row #4:   7  28  28  28  28  28  28  28 
+			DQT, Row #5:  28  28  28  28  28  28  28  28 
+			DQT, Row #6:  28  28  28  28  28  28  28  28 
+			DQT, Row #7:  28  28  28  28  28  28  28  28 
+			Approx quality factor = 84.00 (scaling=32.00 variance=450.51)
+\end{lstlisting}
+
+\subsection{imageOrigin5.jpg}
+	\textbf{Make:} Sony\\
+	\textbf{Model:} DSC-V1\\
+JPEG Snoop found the quantization table in it's databsed associated
+with this camera, so it is likely that it's original. However, this
+table also matches photo-editing software like GIMP and Paint.
+\begin{lstlisting}
+		*** Marker: DQT (xFFDB) ***
+		  Define a Quantization Table.
+		  OFFSET: 0x00001887
+		  Table length = 132
+		  ----
+		  Precision=8 bits
+		  Destination ID=0 (Luminance)
+			DQT, Row #0:   1   1   1   1   2   3   4   5 
+			DQT, Row #1:   1   1   1   2   2   5   5   4 
+			DQT, Row #2:   1   1   1   2   3   5   6   4 
+			DQT, Row #3:   1   1   2   2   4   7   6   5 
+			DQT, Row #4:   1   2   3   4   5   9   8   6 
+			DQT, Row #5:   2   3   4   5   6   8   9   7 
+			DQT, Row #6:   4   5   6   7   8  10  10   8 
+			DQT, Row #7:   6   7   8   8   9   8   8   8 
+			Approx quality factor = 96.06 (scaling=7.87 variance=0.69)
+		  ----
+		  Precision=8 bits
+		  Destination ID=1 (Chrominance)
+			DQT, Row #0:   1   1   2   4   8   8   8   8 
+			DQT, Row #1:   1   2   2   5   8   8   8   8 
+			DQT, Row #2:   2   2   4   8   8   8   8   8 
+			DQT, Row #3:   4   5   8   8   8   8   8   8 
+			DQT, Row #4:   8   8   8   8   8   8   8   8 
+			DQT, Row #5:   8   8   8   8   8   8   8   8 
+			DQT, Row #6:   8   8   8   8   8   8   8   8 
+			DQT, Row #7:   8   8   8   8   8   8   8   8 
+			Approx quality factor = 96.02 (scaling=7.97 variance=0.33)
+\end{lstlisting}
+
+\subsection{imageOrigin6.jpg}
+	\textbf{Make:} NONE\\
+	\textbf{Model:} NONE\\
+JPEG Snoop loosly matched compression signatures to a Sony Cybershot
+that had been subsampled. The image also matched image editing software
+like Photoshop, Paint, Quicktime, and more. JPEG Snoop claimed the
+image was edited.
+\begin{lstlisting}
+		*** Marker: DQT (xFFDB) ***
+		  Define a Quantization Table.
+		  OFFSET: 0x00000014
+		  Table length = 67
+		  ----
+		  Precision=8 bits
+		  Destination ID=0 (Luminance)
+			DQT, Row #0:   8   6   5   8  12  20  26  31 
+			DQT, Row #1:   6   6   7  10  13  29  30  28 
+			DQT, Row #2:   7   7   8  12  20  29  35  28 
+			DQT, Row #3:   7   9  11  15  26  44  40  31 
+			DQT, Row #4:   9  11  19  28  34  55  52  39 
+			DQT, Row #5:  12  18  28  32  41  52  57  46 
+			DQT, Row #6:  25  32  39  44  52  61  60  51 
+			DQT, Row #7:  36  46  48  49  56  50  52  50 
+			Approx quality factor = 74.75 (scaling=50.51 variance=0.81)
+		 
+		*** Marker: DQT (xFFDB) ***
+		  Define a Quantization Table.
+		  OFFSET: 0x00000059
+		  Table length = 67
+		  ----
+		  Precision=8 bits
+		  Destination ID=1 (Chrominance)
+			DQT, Row #0:   9   9  12  24  50  50  50  50 
+			DQT, Row #1:   9  11  13  33  50  50  50  50 
+			DQT, Row #2:  12  13  28  50  50  50  50  50 
+			DQT, Row #3:  24  33  50  50  50  50  50  50 
+			DQT, Row #4:  50  50  50  50  50  50  50  50 
+			DQT, Row #5:  50  50  50  50  50  50  50  50 
+			DQT, Row #6:  50  50  50  50  50  50  50  50 
+			DQT, Row #7:  50  50  50  50  50  50  50  50 
+			Approx quality factor = 74.74 (scaling=50.52 variance=0.19)
+\end{lstlisting}
+
+\subsection{Discussion}
+If JPEGsnoop doesn’t find a match between the quantization tables and the metadata tags, does this mean that the image’s origin has been falsified? Why or why not?\\
+If the image EXIF header doesn't match the quantization table in JPEGsnoop
+it is possible that the images origin has been falsified. It is also
+possible that the image has just been recompressed with a new quantization
+table, or compressed with a custom table in the camera.
+
+How could a forger fool falsify the origin of a digital image (i.e. pass the image off as having been captured by a different camera) and fool a program like JPEGsnoop?\\
+A forger could falsify the origin of a digital image to fool JPEGsnoop
+by recompressing the image with a quantization table that is
+characteristic of a different camera, in addition to changing the EXIF
+header data.
+
+\section{Part 2: Block Detection}
 
 \qquad JPEG compression can be detected by identifying $8 \ \times \ 8$
 grids across the image. One way to quantify the blocking is to make the same
