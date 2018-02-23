@@ -18,13 +18,13 @@
 \geometry{margin=1in}
 \usepackage{color}
 \definecolor{light-gray}{gray}{0.95}
-\lstset{numbers=right,
-                numberstyle=\tiny,
+\lstset{numbers=right, 
+                numberstyle=\tiny, 
                 breaklines=true,
                 backgroundcolor=\color{light-gray},
                 numbersep=5pt,
                 xleftmargin=.5in,
-                xrightmargin=.5in}
+                xrightmargin=.5in} 
 
 \sloppy
 \definecolor{lightgray}{gray}{0.5}
@@ -34,9 +34,9 @@
 
 \title{Lab 3: Simple Steganography}
 \author{Brian Hosler \& Sarah Peachey }
-\maketitle
+\maketitle 
 
-
+    
 
 \subsection*{Part 1}
 
@@ -45,54 +45,64 @@ extract the metadata tag associated with image   1) reading the quatization tabl
 \end{par} \vspace{1em}
 
 
-\subsection*{Part 2: Block Detection}
+\subsection*{Part 2}
 
 \qquad JPEG compression can be detected by identifying $8 \ \times \ 8$
 grids across the image. One way to quantify the blocking is to make the same
 calculation at the center of an $8 \ \times \ 8$ block and at the edge of an
 $8 \ \times \ 8$ block and compare the error. If there are no blocking
 artifacts then the error should be small, if there are blocking artifacts
-the values at the corners will greatly varry from the center of the block.
+the values at the corners will greatly varry from the center of the block. 
 
 \includegraphics [width=4in]{block}
 
 Using the $[A, B, C, D, E, F, G, H]$, noted above the \eqref{eq1} and
 \eqref{eq2} are calculated
-for every $8 \ \times \ 8$ block in the image.
+for every $8 \ \times \ 8$ block in the image. 
 
 \begin{align}
-   Z'(i,j)=\abs{A-B-C+D}\label{eq1}\\
-   Z''(i,j)=\abs{E-F-G+H}\label{eq2}
+	Z'(i,j)=\abs{A-B-C+D}\label{eq1}\\
+	Z''(i,j)=\abs{E-F-G+H}\label{eq2}
 \end{align}
 
 The values are then put into a normalized histogram, if the center values,
 Z', histogram looks the same as the edge values Z\'', histogram; then
-the image was jpeg compressed.
-
+the image was jpeg compressed. 
 
 \begin{verbatim}
 im1=imread('Assignment4Files/blockArtifacts1.tif');
-k1=blockDetect(im1);
+k1=blockDetect(im1)
 
 im2=imread('Assignment4Files/blockArtifacts2.tif');
-k1=blockDetect(im2);
+k1=blockDetect(im2)
 
 im3=imread('Assignment4Files/blockArtifacts3.tif');
-k1=blockDetect(im2);
+k1=blockDetect(im2)
 
 type('blockDetect.m')
 \end{verbatim}
 
-        \color{lightgray} \begin{verbatim}
-
-The strength of the blocking fingerprint is 5.842621e-01.
+        \color{lightgray} \begin{verbatim}The strength of the blocking fingerprint is 1.498818e+00.
 So the image was JPEG compressed 
 
-The strength of the blocking fingerprint is 5.410334e-01.
+k1 =
+
+    1.4988
+
+The strength of the blocking fingerprint is 1.496792e+00.
 So the image was JPEG compressed 
 
-The strength of the blocking fingerprint is 5.410334e-01.
+k1 =
+
+    1.4968
+
+The strength of the blocking fingerprint is 1.496792e+00.
 So the image was JPEG compressed 
+
+k1 =
+
+    1.4968
+
 
 function [ k ] = blockDetect( im )
 %blockDetect implements the Fan and de Quieroz?s JPEG blocking artifact
@@ -110,9 +120,9 @@ function [ k ] = blockDetect( im )
             D=grid(5,5); 
             Zp=[Zp, double(abs(A-B-C+D))]; 
             E=grid(8,8); 
-            F=im(i+7,j+8); 
-            G=im(i+8,j+7); 
-            H=im(i+8,j+8); 
+            F=im(i+7,i+8); 
+            G=im(i+8,i+7); 
+            H=im(i+8,i+8); 
             Zpp=[Zpp, double(abs(E-F-G+H))]; 
         end 
     end 
@@ -139,12 +149,12 @@ function [ k ] = blockDetect( im )
 end
 
 \end{verbatim} \color{black}
-
+    
 As seen below the Z' and Z\'', histograms look very different. Also
 the error of the two histograms was taken, called the blocking fingerprint.
 The blocking fingerprint was then compared to a threshold of
-0.25 to see if jpeg compression was detected.
-    
+0.25 to see if jpeg compression was detected. 
+
 \includegraphics [width=4in]{lab4_01.eps}
 
 \includegraphics [width=4in]{lab4_02.eps}

@@ -15,12 +15,12 @@ clc
 %% Part 2 
 
 im1=imread('Assignment4Files/blockArtifacts1.tif');
-k1=blockDetect(im1)
+k1=blockDetect(im1); 
 
 im2=imread('Assignment4Files/blockArtifacts2.tif');
-k1=blockDetect(im2)
+k1=blockDetect(im2); 
 
 im3=imread('Assignment4Files/blockArtifacts3.tif');
-k1=blockDetect(im2)
+k1=blockDetect(im2); 
 
 type('blockDetect.m')

@@ -14,9 +14,9 @@ function [ k ] = blockDetect( im )
             D=grid(5,5); 
             Zp=[Zp, double(abs(A-B-C+D))]; 
             E=grid(8,8); 
-            F=im(i+7,i+8); 
-            G=im(i+8,i+7); 
-            H=im(i+8,i+8); 
+            F=im(i+7,j+8); 
+            G=im(i+8,j+7); 
+            H=im(i+8,j+8); 
             Zpp=[Zpp, double(abs(E-F-G+H))]; 
         end 
     end 
