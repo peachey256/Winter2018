@@ -38,7 +38,7 @@
 \maketitle
 
 
-\section{Part 1: JPEG Snoop}
+\section{JPEG Snoop}
 
 \subsection{imageOrigin1.jpg}
 	\textbf{Make:} Canon\\
@@ -271,7 +271,7 @@ image was edited.
 \end{lstlisting}
 
 \subsection{Discussion}
-If JPEGsnoop doesn’t find a match between the quantization tables and the metadata tags, does this mean that the image’s origin has been falsified? Why or why not?\\
+If JPEG Snoop doesn’t find a match between the quantization tables and the metadata tags, does this mean that the image’s origin has been falsified? Why or why not?\\
 If the image EXIF header doesn't match the quantization table in JPEGsnoop
 it is possible that the images origin has been falsified. It is also
 possible that the image has just been recompressed with a new quantization
@@ -304,7 +304,7 @@ for every $8 \ \times \ 8$ block in the image.
 \end{align}
 
 The values are then put into a normalized histogram, if the center values,
-Z', histogram looks the same as the edge values Z\'', histogram; then
+Z', histogram looks the same as the edge values Z'', histogram; then
 the image was jpeg compressed.
 
 
@@ -378,16 +378,16 @@ end
 
 \end{verbatim} \color{black}
 
-As seen below the Z' and Z\'', histograms look very different. Also
+As seen below the Z' and Z'', histograms look very different. Also
 the error of the two histograms was taken, called the blocking fingerprint.
 The blocking fingerprint was then compared to a threshold of
 0.25 to see if jpeg compression was detected.
     
-\includegraphics [width=4in]{lab4_01.eps}
+\includegraphics [width=3.5in]{lab4_01.eps}
 
-\includegraphics [width=4in]{lab4_02.eps}
+\includegraphics [width=3.5in]{lab4_02.eps}
 
-\includegraphics [width=4in]{lab4_03.eps}
+\includegraphics [width=3.5in]{lab4_03.eps}
 
 
 
