@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 MAR 2018 11:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 MAR 2018 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab5.tex
+**lab5
 (./lab5.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
@@ -464,10 +464,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package epstopdf Info: Source file: <lab5_01.eps>
-(epstopdf)                    date: 2018-03-04 12:00:53
+(epstopdf)                    date: 2018-03-02 12:02:31
 (epstopdf)                    size: 145677 bytes
 (epstopdf)             Output file: <lab5_01-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 10:46:21
+(epstopdf)                    date: 2018-03-08 10:15:41
 (epstopdf)                    size: 29610 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab5_01-eps-converted-to.p
 df lab5_01.eps>
@@ -481,10 +481,10 @@ File: lab5_01-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: lab5_01-eps-converted-to.pdf used on input line 103.
 (pdftex.def)             Requested size: 252.94499pt x 189.82338pt.
 Package epstopdf Info: Source file: <lab5_02.eps>
-(epstopdf)                    date: 2018-03-04 12:00:53
+(epstopdf)                    date: 2018-03-02 12:02:32
 (epstopdf)                    size: 252370 bytes
 (epstopdf)             Output file: <lab5_02-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 10:46:21
+(epstopdf)                    date: 2018-03-08 10:15:41
 (epstopdf)                    size: 30701 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab5_02-eps-converted-to.p
 df lab5_02.eps>
@@ -498,10 +498,10 @@ File: lab5_02-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: lab5_02-eps-converted-to.pdf used on input line 110.
 (pdftex.def)             Requested size: 252.94499pt x 189.82338pt.
 Package epstopdf Info: Source file: <lab5_03.eps>
-(epstopdf)                    date: 2018-03-04 12:00:53
+(epstopdf)                    date: 2018-03-02 12:02:32
 (epstopdf)                    size: 252204 bytes
 (epstopdf)             Output file: <lab5_03-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 10:46:22
+(epstopdf)                    date: 2018-03-08 10:15:41
 (epstopdf)                    size: 30868 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab5_03-eps-converted-to.p
 df lab5_03.eps>
@@ -516,10 +516,10 @@ Package pdftex.def Info: lab5_03-eps-converted-to.pdf used on input line 117.
 (pdftex.def)             Requested size: 216.81pt x 162.70299pt.
  [2 <./lab5_01-eps-converted-to.pdf> <./lab5_02-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <lab5_04.eps>
-(epstopdf)                    date: 2018-03-04 12:00:53
+(epstopdf)                    date: 2018-03-02 12:02:32
 (epstopdf)                    size: 170231 bytes
 (epstopdf)             Output file: <lab5_04-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 10:46:23
+(epstopdf)                    date: 2018-03-08 10:15:41
 (epstopdf)                    size: 32065 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab5_04-eps-converted-to.p
 df lab5_04.eps>
@@ -533,10 +533,10 @@ File: lab5_04-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: lab5_04-eps-converted-to.pdf used on input line 124.
 (pdftex.def)             Requested size: 216.81pt x 162.70299pt.
 Package epstopdf Info: Source file: <lab5_05.eps>
-(epstopdf)                    date: 2018-03-04 12:00:53
+(epstopdf)                    date: 2018-03-02 12:02:33
 (epstopdf)                    size: 133250 bytes
 (epstopdf)             Output file: <lab5_05-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 10:46:23
+(epstopdf)                    date: 2018-03-08 10:15:41
 (epstopdf)                    size: 27799 bytes
 (epstopdf)             Command: <repstopdf --outfile=lab5_05-eps-converted-to.p
 df lab5_05.eps>
@@ -571,14 +571,14 @@ Here is how much of TeX's memory you used:
  12154 multiletter control sequences out of 15000+600000
  9357 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,6n,32p,323b,5593s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,6n,32p,319b,5593s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t10.pfb>
-Output written on lab5.pdf (3 pages, 213089 bytes).
+Output written on lab5.pdf (3 pages, 213399 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
