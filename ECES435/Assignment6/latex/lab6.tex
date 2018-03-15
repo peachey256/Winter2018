@@ -1,10 +1,31 @@
-
-% This LaTeX was auto-generated from MATLAB code.
-% To make changes, update the MATLAB code and republish this document.
-
 \documentclass{article}
 \usepackage{graphicx}
+\graphicspath{ {./} }
 \usepackage{color}
+
+\usepackage{amsmath}
+\usepackage{commath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{algorithm2e}
+\usepackage{float}
+
+\usepackage{hyperref}
+\hypersetup{linktoc=all}
+
+\usepackage{listings}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+\lstset{numbers=right,
+                basicstyle=\tiny,
+                numberstyle=\tiny,
+                breaklines=true,
+                backgroundcolor=\color{light-gray},
+                numbersep=5pt,
+                xleftmargin=.5in,
+                xrightmargin=.5in}
 
 \sloppy
 \definecolor{lightgray}{gray}{0.5}
@@ -12,20 +33,21 @@
 
 \begin{document}
 
-    
-    
-\subsection*{Contents}
+\title{Lab 4: Detecting Image Editing}
+\author{Brian Hosler \& Sarah Peachey }
+\maketitle
 
-\begin{itemize}
-\setlength{\itemsep}{-1ex}
-   \item part two
-\end{itemize}
+\qquad words about intro jawn 
+
+\newpage
+
+
+
+\section{Detecting Image Contrast Enhancement}
+
+\qquad words about stuff for part one 
+
 \begin{verbatim}
-clear
-close all
-clc
-%Lab 6
-%Brian Hosler and Sarah Peachey
 ce1=imread('Assignment6Files/imageCE1.tif');
 ce2=imread('Assignment6Files/imageCE2.tif');
 ce3=imread('Assignment6Files/imageCE3.tif');
@@ -76,7 +98,7 @@ imhist(ce5)
 type('Gcorrection.m')
 \end{verbatim}
 
-        \color{lightgray} \begin{verbatim}
+\color{lightgray} \begin{verbatim}
 function [ img_out ] = Gcorrection(img_in, gama)
 %Does gamma correction using the equation:
 %   new=2558(old/255)^gamma
@@ -85,6 +107,9 @@ end
 
 \end{verbatim} \color{black}
     
+words about resutlts from part 1 
+
+
 \includegraphics [width=4in]{lab6_01.eps}
 
 \includegraphics [width=4in]{lab6_02.eps}
@@ -98,7 +123,41 @@ end
 \includegraphics [width=4in]{lab6_06.eps}
 
 
-\subsection*{part two}
+\section{Detecting Image Resampling and Resizing}
+
+\qquad One of the most common image resampling operations is resizing. Image
+resampling fingerprints can be detected with the Popescu and Faird method
+but is computationally complex. The algorithm derived by Kirchner is an
+approximation of the same results but far less computationally intense. 
+Kirchner's algorithm uses a fixed linear filter to approximate relationships
+between pixel values. The variance resulting from the predicted pixel error
+will be periodic. As seen in the below function Kirchner's algorithm, the
+image is first filtered with the linear prediction filter, then the error is
+calculated, and the p-map is then approximated with the below equation. 
+ 
+\begin{align} 
+	p(x,y)=\lambda exp^{\frac{-e(x,y)^\tau}{\sigma}}
+\end{align}
+
+
+
+\color{lightgray} \begin{verbatim}
+function [ pmap_approx ] = kirchners( im )
+%KIRCHNERS  approximates the pmap 
+%   Detailed explanation goes here
+I=double(im); 
+% 1)
+alpha=[-0.25 0.5 -0.25; 0.5 0 0.5;-0.25 0.5 -.25]; 
+I_hat=filter2(alpha, I); 
+% 2)
+pred_error=I-I_hat; 
+% 3)
+lambda=1; 
+tau=2; 
+sigma=1; 
+pmap_approx=lambda*exp((-pred_error.^tau)./sigma); 
+end
+\end{verbatim} 
 
 \begin{verbatim}
 im1=imread('Assignment6Files/resamp1.tif');
@@ -131,28 +190,17 @@ showFreqPmap(p3)
 subplot(2,2,4)
 showFreqPmap(p4)
 type('kirchners.m')
-\end{verbatim}
-
-        \color{lightgray} \begin{verbatim}
-function [ pmap_approx ] = kirchners( im )
-%UNTITLED approximates the pmap 
-%   Detailed explanation goes here
-I=double(im); 
-% 1)
-alpha=[-0.25 0.5 -0.25; 0.5 0 0.5;-0.25 0.5 -.25]; 
-I_hat=filter2(alpha, I); 
-% 2)
-pred_error=I-I_hat; 
-% 3)
-lambda=1; 
-tau=2; 
-sigma=1; 
-pmap_approx=lambda*exp((-pred_error.^tau)./sigma); 
-
-end
-
-\end{verbatim} \color{black}
+\end{verbatim}\color{black}
     
+
+Below shows the p-map for the several images, the top-left and bottom-right
+images appear to have a periodic grid, so they are clearly resized. So just
+based off the p-maps resampIm2.tif and resampIm3.tif appear to be resized
+but the other two do not. But then the frequency of the p-map is calculated
+which showed that the not only 2 and 3 but also resampIm4.tif was resampled
+in at least one direction. 
+
+
 \includegraphics [width=4in]{lab6_07.eps}
 
 \includegraphics [width=4in]{lab6_08.eps}
