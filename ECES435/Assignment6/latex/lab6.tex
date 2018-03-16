@@ -40,10 +40,10 @@
 \qquad Image editing operations which are intended to only
 increase the perceptual quality of images, or not change the
 content, leave traces or fingerprints, which can be found by
-looking at statictics of the image. For example, contrast
+looking at statistics of the image. For example, contrast
 enhancement can be found by looking at pixel value histograms.
 Resampling can be detected using generic prediction error
-filters, and analysing thei frequency of the estimated
+filters, and analysing the frequency of the estimated
 probability of errors.
 
 \tableofcontents
@@ -54,7 +54,7 @@ probability of errors.
 \section{Detecting Image Contrast Enhancement}
 
 \qquad Contrast enhancement through gamma correction is a
-deterministic, non linear mapping of pixel values. This
+deterministic, non-linear mapping of pixel values. This
 non-linearity causes multiple pixel values to map to the
 same pixel value, and consecutive pixel values to be mapped
 further apart. Both of these phenomina are visible in the
@@ -62,7 +62,7 @@ pixel value histograms of contrast enhanced images. The
 pixel value histograms of four images were viewed using
 MATLAB to determine if they were contrast enhanced or not.
 Next, several images were enhanced using gamma correction
-with gamme below and above 1, to view the effects that
+with gamma below and above 1, to view the effects that
 different gamma have on the histograms.
 
 \begin{lstlisting}
@@ -202,7 +202,7 @@ calculated, and the p-map is then approximated with the below equation.
 
 
 
-\color{lightgray} \begin{verbatim}
+\begin{lstlisting}
 function [ pmap_approx ] = kirchners( im )
 %KIRCHNERS  approximates the pmap 
 %   Detailed explanation goes here
@@ -251,7 +251,7 @@ showFreqPmap(p3)
 subplot(2,2,4)
 showFreqPmap(p4)
 type('kirchners.m')
-\end{verbatim}\color{black}
+\end{lstlisting}
     
 
 Below shows the p-map for the several images, the top-left and bottom-right
