@@ -218,9 +218,9 @@ tau=2;
 sigma=1; 
 pmap_approx=lambda*exp((-pred_error.^tau)./sigma); 
 end
-\end{verbatim} 
+\end{lstlisting} 
 
-\begin{verbatim}
+\begin{lstlisting}
 im1=imread('Assignment6Files/resamp1.tif');
 im2=imread('Assignment6Files/resamp2.tif');
 im3=imread('Assignment6Files/resamp3.tif');
@@ -254,10 +254,11 @@ type('kirchners.m')
 \end{lstlisting}
     
 
-Below shows the p-map for the several images, the top-left and bottom-right
+Below shows the p-map for the several images, the top-right and bottom-left
 images appear to have a periodic grid, so they are clearly resized. So just
 based off the p-maps resampIm2.tif and resampIm3.tif appear to be resized
-but the other two do not. But then the frequency of the p-map is calculated
+but the other two do not. But then the frequency of the p-map is
+calculated and also shown below, 
 which showed that the not only 2 and 3 but also resampIm4.tif was resampled
 in at least one direction. 
 
