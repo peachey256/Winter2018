@@ -19,7 +19,7 @@
 \usepackage{color}
 \definecolor{light-gray}{gray}{0.95}
 \lstset{numbers=right,
-                basicstyle=\tiny,
+                basicstyle=\small,
                 numberstyle=\tiny,
                 breaklines=true,
                 backgroundcolor=\color{light-gray},
@@ -33,21 +33,39 @@
 
 \begin{document}
 
-\title{Lab 4: Detecting Image Editing}
+\title{Lab 6: Contrast Enhancement and Resampling}
 \author{Brian Hosler \& Sarah Peachey }
 \maketitle
 
-\qquad words about intro jawn 
+\qquad Image editing operations which are intended to only
+increase the perceptual quality of images, or not change the
+content, leave traces or fingerprints, which can be found by
+looking at statictics of the image. For example, contrast
+enhancement can be found by looking at pixel value histograms.
+Resampling can be detected using generic prediction error
+filters, and analysing thei frequency of the estimated
+probability of errors.
 
+\tableofcontents
 \newpage
 
 
 
 \section{Detecting Image Contrast Enhancement}
 
-\qquad words about stuff for part one 
+\qquad Contrast enhancement through gamma correction is a
+deterministic, non linear mapping of pixel values. This
+non-linearity causes multiple pixel values to map to the
+same pixel value, and consecutive pixel values to be mapped
+further apart. Both of these phenomina are visible in the
+pixel value histograms of contrast enhanced images. The
+pixel value histograms of four images were viewed using
+MATLAB to determine if they were contrast enhanced or not.
+Next, several images were enhanced using gamma correction
+with gamme below and above 1, to view the effects that
+different gamma have on the histograms.
 
-\begin{verbatim}
+\begin{lstlisting}
 ce1=imread('Assignment6Files/imageCE1.tif');
 ce2=imread('Assignment6Files/imageCE2.tif');
 ce3=imread('Assignment6Files/imageCE3.tif');
@@ -96,31 +114,74 @@ figure
 imhist(ce5)
 
 type('Gcorrection.m')
-\end{verbatim}
+\end{lstlisting}
 
-\color{lightgray} \begin{verbatim}
+\newpage
+\begin{lstlisting}
 function [ img_out ] = Gcorrection(img_in, gama)
 %Does gamma correction using the equation:
 %   new=2558(old/255)^gamma
     img_out=uint8(255*(double(img_in)/255).^gama);
 end
 
-\end{verbatim} \color{black}
+\end{lstlisting}
     
-words about resutlts from part 1 
+\qquad Given the histograms of images 1-4, we found the images
+1 and 3 show contrast enhancement fingerprints, where images
+2 and 4 have smoother histograms that do not appear to be
+altered. The sudden peaks and gaps in the histogram are
+characteristic of contrast enhanced images.
+
+\qquad A number less than one raised to a power greater than one will
+result in a number even less than the original. Rounding will
+cause smaller numbers to be mapped together, while larger
+numbers will be mapped apart. Gamma correction with gamma will
+result in locally expansive regions in the region of the
+histogram representing light pixels. This will correspond
+to locally contractive regions in the area of the histogram
+representing dark pixel values.
+Gamma values less than 1 will cause the opposite behavior,
+locally expansive regions on the left of the histogram, and
+contractive regions on the right.
+Given this, it is likely that imageCE5.tif underwent gamma
+correction where gamma was less than 1.
+
+\begin{figure}[H]
+\centering
+\includegraphics [width=5in,height=3in]{lab6_01.eps}
+\includegraphics [width=5in,height=3in]{lab6_02.eps}
+\caption{Pixel value histograms of imagesCE1.tif, imageCE2.tif,
+imageCE3.tif and imageCE4.tif}
+\end{figure}
 
 
-\includegraphics [width=4in]{lab6_01.eps}
-
-\includegraphics [width=4in]{lab6_02.eps}
-
+\begin{figure}[H]
+\centering
 \includegraphics [width=4in]{lab6_03.eps}
+\caption{Pixel value histograms of unaltIm1.tif after gamma correction
+of 0.7, 1(no correction), and 1.3}
+\end{figure}
 
+\begin{figure}[H]
+\centering
 \includegraphics [width=4in]{lab6_04.eps}
+\caption{Pixel value histograms of unaltIm2.tif after gamma correction
+of 0.7, 1(no correction), and 1.3}
+\end{figure}
 
+\begin{figure}[H]
+\centering
 \includegraphics [width=4in]{lab6_05.eps}
+\caption{Pixel value histograms of unaltIm3.tif after gamma correction
+of 0.7, 1(no correction), and 1.3}
+\end{figure}
 
+\begin{figure}[H]
+\centering
 \includegraphics [width=4in]{lab6_06.eps}
+\caption{Pixel value histogram of imageCE5.tif showing gamma correction
+where gamma os less than 1}
+\end{figure}
 
 
 \section{Detecting Image Resampling and Resizing}

@@ -1,0 +1,2 @@
+\contentsline {section}{\numberline {1}Detecting Image Contrast Enhancement}{2}{section.1}
+\contentsline {section}{\numberline {2}Detecting Image Resampling and Resizing}{5}{section.2}
